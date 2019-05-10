@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://luojianfeng0804.github.io/luojianfeng0804">
-  <title>Jave基础题1-2 | CodeEdge</title>
+  <title>Java基础题3-6 | CodeEdge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不死的兔子首先看题目描述本题其实就是求斐波那契数列，此题有两种思路就是用递归法和循环法，算法本质是相似的，两种做法我都实现了一下">
+  <meta name="description" content="水仙花数此题一开始我陷入了一个误区，总是想着如何每次遍历到一个数时，将其三个数位分离出来。其实完全科一进行三个循环，对三个数位进行遍历，时间复杂度是一样的，而且省去了提取数位的繁琐操作。 分离质因数这题困扰了我许久，主要问题在于我一直在考虑如何判断分离出来的因数是一个质数，忽略了一点那就是每计算出来一个因数，如果这个数不是质数，他的因数一定比他小，而比他小的数都已经在之前遍历验证提取过了过了，这与">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jave基础题1-2">
-<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/09/Jave基础题1-2/index.html">
+<meta property="og:title" content="Java基础题3-6">
+<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/10/Java基础题3-6/index.html">
 <meta property="og:site_name" content="CodeEdge">
-<meta property="og:description" content="不死的兔子首先看题目描述本题其实就是求斐波那契数列，此题有两种思路就是用递归法和循环法，算法本质是相似的，两种做法我都实现了一下">
+<meta property="og:description" content="水仙花数此题一开始我陷入了一个误区，总是想着如何每次遍历到一个数时，将其三个数位分离出来。其实完全科一进行三个循环，对三个数位进行遍历，时间复杂度是一样的，而且省去了提取数位的繁琐操作。 分离质因数这题困扰了我许久，主要问题在于我一直在考虑如何判断分离出来的因数是一个质数，忽略了一点那就是每计算出来一个因数，如果这个数不是质数，他的因数一定比他小，而比他小的数都已经在之前遍历验证提取过了过了，这与">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/09/Jave基础题1-2/1.jpg">
-<meta property="og:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/09/Jave基础题1-2/2.jpg">
-<meta property="og:updated_time" content="2019-05-09T16:31:31.960Z">
+<meta property="og:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/10/Java基础题3-6/3.jpg">
+<meta property="og:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/10/Java基础题3-6/4.jpg">
+<meta property="og:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/10/Java基础题3-6/5.jpg">
+<meta property="og:updated_time" content="2019-05-10T16:42:08.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jave基础题1-2">
-<meta name="twitter:description" content="不死的兔子首先看题目描述本题其实就是求斐波那契数列，此题有两种思路就是用递归法和循环法，算法本质是相似的，两种做法我都实现了一下">
-<meta name="twitter:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/09/Jave基础题1-2/1.jpg">
+<meta name="twitter:title" content="Java基础题3-6">
+<meta name="twitter:description" content="水仙花数此题一开始我陷入了一个误区，总是想着如何每次遍历到一个数时，将其三个数位分离出来。其实完全科一进行三个循环，对三个数位进行遍历，时间复杂度是一样的，而且省去了提取数位的繁琐操作。 分离质因数这题困扰了我许久，主要问题在于我一直在考虑如何判断分离出来的因数是一个质数，忽略了一点那就是每计算出来一个因数，如果这个数不是质数，他的因数一定比他小，而比他小的数都已经在之前遍历验证提取过了过了，这与">
+<meta name="twitter:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/10/Java基础题3-6/3.jpg">
   
     <link rel="alternative" href="/atom.xml" title="CodeEdge" type="application/atom+xml">
   
@@ -149,32 +150,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Jave基础题1-2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java基础题3-6" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Jave基础题1-2
+      Java基础题3-6
     </h1>
   
 
         
-        <a href="/luojianfeng0804/2019/05/09/Jave基础题1-2/" class="archive-article-date">
-  	<time datetime="2019-05-09T15:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+        <a href="/luojianfeng0804/2019/05/10/Java基础题3-6/" class="archive-article-date">
+  	<time datetime="2019-05-10T15:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="不死的兔子"><a href="#不死的兔子" class="headerlink" title="不死的兔子"></a>不死的兔子</h2><p>首先看题目描述<br><img src="/luojianfeng0804/2019/05/09/Jave基础题1-2/1.jpg" alt><br>本题其实就是求斐波那契数列，此题有两种思路就是用递归法和循环法，算法本质是相似的，两种做法我都实现了一下<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package cn.day01.LeetCode;</span><br><span class="line">import java.util.*;</span><br><span class="line">public class WorkCode01 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int value;</span><br><span class="line">        Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">        value=in.nextInt(); //接收整形数据</span><br><span class="line">        int sum = calculator(value);</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br><span class="line">    public static  int calculator(int a) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt;=2) &#123;</span><br><span class="line">            <span class="built_in">return</span> 1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            int sum;</span><br><span class="line">            sum = calculator(a-1)+calculator(a-2);</span><br><span class="line">            <span class="built_in">return</span> sum;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">package cn.day01.LeetCode;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line">public class WorkCode01_1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int value;</span><br><span class="line">        Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">        value=in.nextInt();//接收整形数据</span><br><span class="line">        <span class="keyword">if</span>(value &lt;= 2)&#123;</span><br><span class="line">            System.out.println(1);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            value = value - 2;</span><br><span class="line">            int sum_1 = 1;</span><br><span class="line">            int sum_2 = 1;</span><br><span class="line">            int sum = 0;</span><br><span class="line">            <span class="keyword">for</span>(int i=0;i&lt;value;i++)&#123;</span><br><span class="line">                sum = sum_1+sum_2;</span><br><span class="line">                sum_1 = sum_2;</span><br><span class="line">                sum_2 = sum;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>其实算法的解决思路十分简单，但是这题我遇到的最大的问题竟然是数据的输入问题。<br>我们都知道，C++与C里都集成有十分方便的输入输出工具，但是接触了Java之后发现他竟然不直接支持数据的输出操作。在一番百度后，我采用了现在使用的方法。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">value=in.nextInt(); //接收整形数据</span><br></pre></td></tr></table></figure>
-<p>这里使用的是一个Scanner工具，我把他理解成了类似于C++中输入输出流的工具，使用方法也很类似，只是没有流操作那么智能</p>
-<h2 id="输出素数"><a href="#输出素数" class="headerlink" title="输出素数"></a>输出素数</h2><p><img src="/luojianfeng0804/2019/05/09/Jave基础题1-2/2.jpg" alt><br>这题开始我看到题目描述的做法感觉很无脑，而且需要n^2的时间复杂度。所以我打算用筛法尝试一下，然后发现筛法在求1到特定数之间有多少个素数这种问题时比较好用，但是这种问题不太适合，因为这里不用求100以下的素数，更重要的是使用筛法会产生一个数组，相应的会浪费一定的内存空间，关于两种方法的优劣，以后有空再比较一下（鸽了鸽了，哈哈哈哈）<br>此题解决的代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">package cn.day01.LeetCode;</span><br><span class="line"></span><br><span class="line">public class WorkCode02_1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int num = 0;</span><br><span class="line">        int i = 101;</span><br><span class="line">        <span class="keyword">while</span> (i &lt;= 200)&#123;</span><br><span class="line">            int sqrt = 2;</span><br><span class="line">            <span class="keyword">while</span> (sqrt &lt;= i)&#123;</span><br><span class="line">                <span class="keyword">if</span> (i % sqrt == 0)&#123;</span><br><span class="line">                    <span class="built_in">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> sqrt ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i == sqrt)&#123;</span><br><span class="line">                System.out.println(i);</span><br><span class="line">                num ++;</span><br><span class="line">            &#125;</span><br><span class="line">            i ++;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="水仙花数"><a href="#水仙花数" class="headerlink" title="水仙花数"></a>水仙花数</h2><p><img src="/luojianfeng0804/2019/05/10/Java基础题3-6/3.jpg" alt><br>此题一开始我陷入了一个误区，总是想着如何每次遍历到一个数时，将其三个数位分离出来。其实完全科一进行三个循环，对三个数位进行遍历，时间复杂度是一样的，而且省去了提取数位的繁琐操作。</p>
+<h2 id="分离质因数"><a href="#分离质因数" class="headerlink" title="分离质因数"></a>分离质因数</h2><p><img src="/luojianfeng0804/2019/05/10/Java基础题3-6/4.jpg" alt><br>这题困扰了我许久，主要问题在于我一直在考虑如何判断分离出来的因数是一个质数，忽略了一点那就是每计算出来一个因数，如果这个数不是质数，他的因数一定比他小，而比他小的数都已经在之前遍历验证提取过了过了，这与说明这个数一定是一个质数。剩下就没什么难点了。<br>代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">public class WorkCode04 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int value;</span><br><span class="line">        Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">        value=in.nextInt(); //接收整形数据</span><br><span class="line">        int n = value;</span><br><span class="line">        int flag = 0;</span><br><span class="line">        int [] str = new int [50];</span><br><span class="line">        <span class="keyword">for</span> (int i = 2;i &lt; value;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (value % i == 0)&#123;</span><br><span class="line">                str[flag] = i;</span><br><span class="line">                value = value/i;</span><br><span class="line">                i--;</span><br><span class="line">                flag++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(n);</span><br><span class="line">        System.out.print(<span class="string">"="</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0;i &lt; flag;i++)&#123;</span><br><span class="line">            System.out.print(str[i]);</span><br><span class="line">            System.out.print(<span class="string">"*"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="判断分数等级"><a href="#判断分数等级" class="headerlink" title="判断分数等级"></a>判断分数等级</h2><p><img src="/luojianfeng0804/2019/05/10/Java基础题3-6/5.jpg" alt><br>此题暴露了我一个知识上的盲区：三元运算符的用法。<br>a?b:c其实是相当于if语句，但是是有返回值的，我直接把其当成了if语句使用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value &gt;= 90?_char = <span class="string">'A'</span>:value &gt;= 60?_char = <span class="string">'B'</span>:_char = <span class="string">'C'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>结果是编译器认为这不是一句完整的语句<br>其实正确的代码应当是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_char = value &gt;= 90?<span class="string">'A'</span>:value &gt;= 60?<span class="string">'B'</span>:<span class="string">'C'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>而此题的关键代码其实也就是只有这一句，这点搞懂了就可以了</p>
+<h2 id="求最大公约数和最小公倍数"><a href="#求最大公约数和最小公倍数" class="headerlink" title="求最大公约数和最小公倍数"></a>求最大公约数和最小公倍数</h2><p>这题用到的就是辗除法，知道的就很简单，我用的while语句进行了实现<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class WorkCode06 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int value_1,value_2;</span><br><span class="line">        Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">        value_1=in.nextInt(); //接收整形数据</span><br><span class="line">        value_2=in.nextInt(); //接收整形数据</span><br><span class="line">        int v1,v2,r;</span><br><span class="line">        v1 = value_1;</span><br><span class="line">        v2 = value_2;</span><br><span class="line">        <span class="keyword">if</span> (value_1 &lt; value_2)&#123;</span><br><span class="line">            r = value_1;</span><br><span class="line">            value_1 = value_2;</span><br><span class="line">            value_2 = r;</span><br><span class="line">        &#125;</span><br><span class="line">        r = value_1 % value_2;</span><br><span class="line">        <span class="keyword">while</span> (r !=0 )&#123;</span><br><span class="line">            value_1 = value_2;</span><br><span class="line">            value_2 = r;</span><br><span class="line">            r = value_1 % value_2;</span><br><span class="line">        &#125;</span><br><span class="line">        int _max = value_2;</span><br><span class="line">        int _min = (v1/_max)*(v2/_max)*_max;</span><br><span class="line">        System.out.print(<span class="string">"最大公约数是"</span>);</span><br><span class="line">        System.out.println(_max);</span><br><span class="line">        System.out.print(<span class="string">"最小公倍数是"</span>);</span><br><span class="line">        System.out.println(_min);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -254,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://luojianfeng0804.github.io/luojianfeng0804/2019/05/09/Jave基础题1-2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://luojianfeng0804.github.io/luojianfeng0804/2019/05/10/Java基础题3-6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,18 +269,9 @@
   
 <nav id="article-nav">
   
-    <a href="/luojianfeng0804/2019/05/10/Java基础题3-6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java基础题3-6
-        
-      </div>
-    </a>
   
-  
-    <a href="/luojianfeng0804/2019/05/08/我的第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客文章</div>
+    <a href="/luojianfeng0804/2019/05/09/Jave基础题1-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Jave基础题1-2</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -306,7 +298,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#不死的兔子"><span class="toc-number">1.</span> <span class="toc-text">不死的兔子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出素数"><span class="toc-number">2.</span> <span class="toc-text">输出素数</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#水仙花数"><span class="toc-number">1.</span> <span class="toc-text">水仙花数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分离质因数"><span class="toc-number">2.</span> <span class="toc-text">分离质因数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断分数等级"><span class="toc-number">3.</span> <span class="toc-text">判断分数等级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#求最大公约数和最小公倍数"><span class="toc-number">4.</span> <span class="toc-text">求最大公约数和最小公倍数</span></a></li></ol>
                     </div>
                 </span>
             </div>

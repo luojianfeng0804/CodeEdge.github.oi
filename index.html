@@ -144,6 +144,74 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java基础题3-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/luojianfeng0804/2019/05/10/Java基础题3-6/">Java基础题3-6</a>
+    </h1>
+  
+
+        
+        <a href="/luojianfeng0804/2019/05/10/Java基础题3-6/" class="archive-article-date">
+  	<time datetime="2019-05-10T15:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="水仙花数"><a href="#水仙花数" class="headerlink" title="水仙花数"></a>水仙花数</h2><p><img src="/luojianfeng0804/2019/05/10/Java基础题3-6/3.jpg" alt><br>此题一开始我陷入了一个误区，总是想着如何每次遍历到一个数时，将其三个数位分离出来。其实完全科一进行三个循环，对三个数位进行遍历，时间复杂度是一样的，而且省去了提取数位的繁琐操作。</p>
+<h2 id="分离质因数"><a href="#分离质因数" class="headerlink" title="分离质因数"></a>分离质因数</h2><p><img src="/luojianfeng0804/2019/05/10/Java基础题3-6/4.jpg" alt><br>这题困扰了我许久，主要问题在于我一直在考虑如何判断分离出来的因数是一个质数，忽略了一点那就是每计算出来一个因数，如果这个数不是质数，他的因数一定比他小，而比他小的数都已经在之前遍历验证提取过了过了，这与说明这个数一定是一个质数。剩下就没什么难点了。<br>代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">public class WorkCode04 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int value;</span><br><span class="line">        Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">        value=in.nextInt(); //接收整形数据</span><br><span class="line">        int n = value;</span><br><span class="line">        int flag = 0;</span><br><span class="line">        int [] str = new int [50];</span><br><span class="line">        <span class="keyword">for</span> (int i = 2;i &lt; value;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (value % i == 0)&#123;</span><br><span class="line">                str[flag] = i;</span><br><span class="line">                value = value/i;</span><br><span class="line">                i--;</span><br><span class="line">                flag++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(n);</span><br><span class="line">        System.out.print(<span class="string">"="</span>);</span><br><span class="line">        <span class="keyword">for</span> (int i = 0;i &lt; flag;i++)&#123;</span><br><span class="line">            System.out.print(str[i]);</span><br><span class="line">            System.out.print(<span class="string">"*"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="判断分数等级"><a href="#判断分数等级" class="headerlink" title="判断分数等级"></a>判断分数等级</h2><p><img src="/luojianfeng0804/2019/05/10/Java基础题3-6/5.jpg" alt><br>此题暴露了我一个知识上的盲区：三元运算符的用法。<br>a?b:c其实是相当于if语句，但是是有返回值的，我直接把其当成了if语句使用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">value &gt;= 90?_char = <span class="string">'A'</span>:value &gt;= 60?_char = <span class="string">'B'</span>:_char = <span class="string">'C'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>结果是编译器认为这不是一句完整的语句<br>其实正确的代码应当是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_char = value &gt;= 90?<span class="string">'A'</span>:value &gt;= 60?<span class="string">'B'</span>:<span class="string">'C'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>而此题的关键代码其实也就是只有这一句，这点搞懂了就可以了</p>
+<h2 id="求最大公约数和最小公倍数"><a href="#求最大公约数和最小公倍数" class="headerlink" title="求最大公约数和最小公倍数"></a>求最大公约数和最小公倍数</h2><p>这题用到的就是辗除法，知道的就很简单，我用的while语句进行了实现<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class WorkCode06 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int value_1,value_2;</span><br><span class="line">        Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">        value_1=in.nextInt(); //接收整形数据</span><br><span class="line">        value_2=in.nextInt(); //接收整形数据</span><br><span class="line">        int v1,v2,r;</span><br><span class="line">        v1 = value_1;</span><br><span class="line">        v2 = value_2;</span><br><span class="line">        <span class="keyword">if</span> (value_1 &lt; value_2)&#123;</span><br><span class="line">            r = value_1;</span><br><span class="line">            value_1 = value_2;</span><br><span class="line">            value_2 = r;</span><br><span class="line">        &#125;</span><br><span class="line">        r = value_1 % value_2;</span><br><span class="line">        <span class="keyword">while</span> (r !=0 )&#123;</span><br><span class="line">            value_1 = value_2;</span><br><span class="line">            value_2 = r;</span><br><span class="line">            r = value_1 % value_2;</span><br><span class="line">        &#125;</span><br><span class="line">        int _max = value_2;</span><br><span class="line">        int _min = (v1/_max)*(v2/_max)*_max;</span><br><span class="line">        System.out.print(<span class="string">"最大公约数是"</span>);</span><br><span class="line">        System.out.println(_max);</span><br><span class="line">        System.out.print(<span class="string">"最小公倍数是"</span>);</span><br><span class="line">        System.out.println(_min);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/luojianfeng0804/2019/05/10/Java基础题3-6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Jave基础题1-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -228,7 +296,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="/luojianfeng0804/2019/05/08/我的第一篇博客文章/1.jpg" alt></p>
-<h2 id="写在前面的"><a href="#写在前面的" class="headerlink" title="写在前面的"></a>写在前面的</h2><p>这个博客最新的计划是打算将王道Java布置的50道LeetCode做完，记录并分享心得。<br>之后的初步打算是完成黑马的培训课程</p>
+<h2 id="写在前面的"><a href="#写在前面的" class="headerlink" title="写在前面的"></a>写在前面的</h2><p>这个博客最新的计划是打算将王道Java布置的50道编程基础题做完，记录并分享心得。<br>之后的初步打算是完成黑马的培训课程</p>
 <p>那就这样吧</p>
 
       
