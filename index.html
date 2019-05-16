@@ -144,6 +144,128 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MySQL作业第二弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/luojianfeng0804/2019/05/16/MySQL作业第二弹/">MySQL作业第二弹</a>
+    </h1>
+  
+
+        
+        <a href="/luojianfeng0804/2019/05/16/MySQL作业第二弹/" class="archive-article-date">
+  	<time datetime="2019-05-16T11:37:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="项目三"><a href="#项目三" class="headerlink" title="项目三"></a>项目三</h2><p>查找超过5名学生的课<br>创建如下所示的courses 表 ，有: student (学生) 和 class (课程)。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">student</th>
+<th style="text-align:center">class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A</td>
+<td style="text-align:center">Math</td>
+</tr>
+<tr>
+<td style="text-align:center">B</td>
+<td style="text-align:center">English</td>
+</tr>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:center">Math</td>
+</tr>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:center">Biology</td>
+</tr>
+<tr>
+<td style="text-align:center">E</td>
+<td style="text-align:center">Math</td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">Computer</td>
+</tr>
+<tr>
+<td style="text-align:center">G</td>
+<td style="text-align:center">Math</td>
+</tr>
+<tr>
+<td style="text-align:center">H</td>
+<td style="text-align:center">Math</td>
+</tr>
+<tr>
+<td style="text-align:center">I</td>
+<td style="text-align:center">Math</td>
+</tr>
+<tr>
+<td style="text-align:center">A</td>
+<td style="text-align:center">Math</td>
+</tr>
+</tbody>
+</table>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE student (</span><br><span class="line">ID VARCHAR(9),</span><br><span class="line">class VARCHAR(25)</span><br><span class="line">);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'A'</span>,<span class="string">'Math'</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'B'</span>,<span class="string">'English'</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'C'</span>,<span class="string">'Math'</span>); </span><br><span class="line">INSERT INTO student VALUES(<span class="string">'D'</span>,<span class="string">'Biology'</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'E'</span>,<span class="string">'Math '</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'F'</span>,<span class="string">'Computer '</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'G'</span>,<span class="string">'Math '</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'H'</span>,<span class="string">'Math '</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'I'</span>,<span class="string">'Math'</span>);</span><br><span class="line">INSERT INTO student VALUES(<span class="string">'A'</span>,<span class="string">'Math'</span>);</span><br><span class="line"></span><br><span class="line">SELECT class </span><br><span class="line">FROM student</span><br><span class="line">GROUP BY class</span><br><span class="line">HAVING COUNT(*)  &gt;5;</span><br></pre></td></tr></table></figure>
+<p>这里特意提到了学生和课程有重复对应的情况<br>但我在查阅了数据库的书之后<br>发现了这么一句话：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COUNT([DISTINCT|ALL]*)</span><br></pre></td></tr></table></figure></p>
+<p>所以说这里是已经对重复的情况进行了规避</p>
+<h2 id="项目四"><a href="#项目四" class="headerlink" title="项目四"></a>项目四</h2><p>创建一个 salary表，如下所示，有m=男性 和 f=女性的值 。<br>|id|name|sex|salary|<br>|:-:|:-:|:-:|:-:|<br>|1 |A   |m  |2500  |<br>|2 |B   |f  |1500  |<br>|3 |C   |m  |5500  |<br>|4 |D   |f  |500   |<br>交换所有的 f 和 m 值(例如，将所有 f 值更改为 m，反之亦然)。要求使用一个更新查询，并且没有中间临时表。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE salary (</span><br><span class="line">ID INT,</span><br><span class="line">name CHAR,</span><br><span class="line">sex CHAR,</span><br><span class="line">salary INT</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">INSERT INTO salary VALUES(<span class="string">'1'</span>,<span class="string">'A'</span>, <span class="string">'m'</span>, <span class="string">'2500'</span>);</span><br><span class="line">INSERT INTO salary VALUES(<span class="string">'2'</span>,<span class="string">'B'</span>,<span class="string">'f'</span>,<span class="string">'1500'</span>);</span><br><span class="line">INSERT INTO salary VALUES(<span class="string">'3'</span>,<span class="string">'C'</span>,<span class="string">'m'</span>,<span class="string">'5500'</span>); </span><br><span class="line">INSERT INTO salary VALUES(<span class="string">'4'</span>,<span class="string">'D'</span>,<span class="string">'f'</span>,<span class="string">'500'</span>);</span><br><span class="line"></span><br><span class="line">UPDATE salary</span><br><span class="line">SET sex = IF (sex = <span class="string">'f'</span>,<span class="string">'m'</span>,<span class="string">'f'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>这里用到了一个if语句，SQL这里的if语句可以类比与C++或者Java的?三元运算符的用法</p>
+<h2 id="项目五"><a href="#项目五" class="headerlink" title="项目五"></a>项目五</h2><p>组合两张表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Person (</span><br><span class="line">PersonId INT PRIMARY KEY,</span><br><span class="line">FirstName VARCHAR(11),</span><br><span class="line">LastName VARCHAR(11)</span><br><span class="line">);  </span><br><span class="line"></span><br><span class="line">INSERT INTO Person VALUES(<span class="string">'1'</span>,<span class="string">"朱"</span>,<span class="string">"帅松"</span>);</span><br><span class="line">INSERT INTO Person VALUES(<span class="string">'2'</span>,<span class="string">"刘"</span>,<span class="string">"昌盛"</span>);</span><br><span class="line">INSERT INTO Person VALUES(<span class="string">'3'</span>,<span class="string">"胡"</span>,<span class="string">"茂青"</span>); </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CREATE TABLE Address (</span><br><span class="line">AddressId INT PRIMARY KEY,</span><br><span class="line">PersonId INT,</span><br><span class="line">City VARCHAR(9),</span><br><span class="line">State VARCHAR(9)</span><br><span class="line">);  </span><br><span class="line"></span><br><span class="line">INSERT INTO Address VALUES(<span class="string">'34'</span>,<span class="string">'1'</span>,<span class="string">"周口"</span>,<span class="string">"荷兰"</span>);</span><br><span class="line">INSERT INTO Address VALUES(<span class="string">'24'</span>,<span class="string">'2'</span>,<span class="string">"桃江"</span>,<span class="string">"法国"</span>);</span><br><span class="line">INSERT INTO Address VALUES(<span class="string">'26'</span>,<span class="string">'5'</span>,<span class="string">"江门"</span>,<span class="string">"美国"</span>);</span><br><span class="line"></span><br><span class="line">SELECT FirstName, LastName, City, State</span><br><span class="line">FROM Person LEFT OUTER JOIN Address ON (Person.PersonId = Address.PersonId);</span><br></pre></td></tr></table></figure></p>
+<p>这里是一个对两张表的左连接操作,关于其他的连接操作过一会会在后面补充说明</p>
+<h2 id="项目六"><a href="#项目六" class="headerlink" title="项目六"></a>项目六</h2><p>编写一个 SQL 查询，来删除 email 表中所有重复的电子邮箱，重复的邮箱里只保留 <strong>Id *</strong>最小 *的那个。<br>email表见上一篇文章<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT Email,MIN(ID)</span><br><span class="line">FROM email</span><br><span class="line">GROUP BY Email;</span><br></pre></td></tr></table></figure></p>
+<p>这里是对分组进行了进一步的查询，但是我还想做到基于这个对表格内容的删改，但是还没有找到好办法，等找到了再来更新</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/luojianfeng0804/2019/05/16/MySQL作业第二弹/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MySQL作业第一弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
