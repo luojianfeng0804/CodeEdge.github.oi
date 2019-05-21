@@ -144,6 +144,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-SQL作业第四弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">SQL作业第四弹</a>
+    </h1>
+  
+
+        
+        <a href="/luojianfeng0804/2019/05/21/SQL作业第四弹/" class="archive-article-date">
+  	<time datetime="2019-05-21T13:28:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="项目十"><a href="#项目十" class="headerlink" title="项目十"></a>项目十</h2><p>Trips 表中存所有出租车的行程信息，Users 表存所有用户。<br></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MySQL作业第三弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -164,11 +227,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="文件转换"><a href="#文件转换" class="headerlink" title="文件转换"></a>文件转换</h2><p>这里尝试了使用Navicat图形化界面来将SQL文件转换成CSV文件但是惊奇的发现导出文件里竟然没有CSV类型<br><img src="/luojianfeng0804/2019/05/18/MySQL作业第三弹/1.jpg" alt><br>后来尝试了SQL语句来进行导出，语句下次在这里补上</p>
-<h2 id="求每个部门薪资最高的人"><a href="#求每个部门薪资最高的人" class="headerlink" title="求每个部门薪资最高的人"></a>求每个部门薪资最高的人</h2><p>我本来想像上次用类似的输出ID最小的Email那题一样，把MIN改成MAX就行了，结果这里还要输出最大的那个人的名字等其他信息，所以我在之前的代码的基础上做了一定的改变<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Employee (</span><br><span class="line">ID INT,</span><br><span class="line">Name VARCHAR(25),</span><br><span class="line">Salary INT,</span><br><span class="line">DepartmentId INT</span><br><span class="line">);</span><br><span class="line">INSERT INTO Employee VALUES(<span class="string">'1'</span>,<span class="string">'Joe'</span>,<span class="string">'7000'</span>,<span class="string">'1'</span>);</span><br><span class="line">INSERT INTO Employee VALUES(<span class="string">'2'</span>,<span class="string">'Henry'</span>,<span class="string">'8000'</span>,<span class="string">'2'</span>);</span><br><span class="line">INSERT INTO Employee VALUES(<span class="string">'3'</span>,<span class="string">'Sam'</span>,<span class="string">'6000'</span>,<span class="string">'2'</span>);</span><br><span class="line">INSERT INTO Employee VALUES(<span class="string">'4'</span>,<span class="string">'Max'</span>,<span class="string">'9000'</span>,<span class="string">'1'</span>);</span><br><span class="line"></span><br><span class="line">CREATE TABLE Department(</span><br><span class="line">Id INT PRIMARY KEY,</span><br><span class="line">Name varchar(10) NOT NULL</span><br><span class="line">);</span><br><span class="line">INSERT INTO Department VALUES(1,<span class="string">'IT'</span>);</span><br><span class="line">INSERT INTO Department VALUES(2,<span class="string">'Sales'</span>);</span><br><span class="line"></span><br><span class="line">SELECT D.Name as Department, E1.Name as Employee, E1.Salary as Salary</span><br><span class="line">FROM Employee E1 join Department D</span><br><span class="line">WHERE E1.DepartmentId = D.Id and E1.Salary = (</span><br><span class="line">	SELECT MAX(Salary) </span><br><span class="line">	from Employee E2 </span><br><span class="line">	WHERE E1.DepartmentId = E2.DepartmentId);</span><br></pre></td></tr></table></figure></p>
-<h2 id="座位改变"><a href="#座位改变" class="headerlink" title="座位改变"></a>座位改变</h2><p>我本来以为这里需要用UPDATE语句来进行表的修改，但众所周知，两个数据的交换要引入新的变量，而在SQL里，我还没了解到这方面的内容，所以就仿照网上的大神的写法，写了一个SELECT语言的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE seat (</span><br><span class="line">ID INT,</span><br><span class="line">Name VARCHAR(25)</span><br><span class="line">);</span><br><span class="line">INSERT INTO seat VALUES(<span class="string">'1'</span>,<span class="string">'Abbot'</span>);</span><br><span class="line">INSERT INTO seat VALUES(<span class="string">'2'</span>,<span class="string">'Doris'</span>);</span><br><span class="line">INSERT INTO seat VALUES(<span class="string">'3'</span>,<span class="string">'Emrson'</span>);</span><br><span class="line">INSERT INTO seat VALUES(<span class="string">'4'</span>,<span class="string">'Green'</span>);</span><br><span class="line">INSERT INTO seat VALUES(<span class="string">'5'</span>,<span class="string">'Jeames'</span>);</span><br><span class="line"></span><br><span class="line">SELECT id-1 as id,Name</span><br><span class="line">FROM seat</span><br><span class="line">WHERE id % 2=0</span><br><span class="line"></span><br><span class="line">UNION</span><br><span class="line"></span><br><span class="line">SELECT id+1 as id,Name</span><br><span class="line">FROM seat</span><br><span class="line">WHERE id % 2=1 AND id &lt; (SELECT COUNT(*) from seat)</span><br><span class="line"></span><br><span class="line">UNION</span><br><span class="line"></span><br><span class="line">SELECT *</span><br><span class="line">FROM seat</span><br><span class="line">WHERE id % 2=1 AND id =(SELECT COUNT(*) from seat)</span><br></pre></td></tr></table></figure></p>
-<h2 id="成绩排序"><a href="#成绩排序" class="headerlink" title="成绩排序"></a>成绩排序</h2><p>此题代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">INSERT INTO Scores VALUES(1,3.50);</span><br><span class="line">INSERT INTO Scores VALUES(2,3.65);</span><br><span class="line">INSERT INTO Scores VALUES(3,4.00);</span><br><span class="line">INSERT INTO Scores VALUES(4,3.85);</span><br><span class="line">INSERT INTO Scores VALUES(5,4.00);</span><br><span class="line">INSERT INTO Scores VALUES(6,3.65);</span><br><span class="line"></span><br><span class="line">SELECT s.Score,COUNT(s.score) AS rank</span><br><span class="line">	FROM scores a JOIN scores s ON a.score&lt;=s.score</span><br><span class="line">	GROUP BY a.id </span><br><span class="line">	ORDER BY a.score DESC;</span><br></pre></td></tr></table></figure></p>
-
+        <h2 id="文件转换"><a href="#文件转换" class="headerlink" title="文件转换"></a>文件转换</h2><p>这里尝试了使用Navicat图形化界面来将SQL文件转换成CSV文件但是惊奇的发现导出文件里竟然没有CSV类型<br></p>
+        
       
 
       

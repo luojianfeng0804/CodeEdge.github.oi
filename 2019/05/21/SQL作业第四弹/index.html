@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://luojianfeng0804.github.io/luojianfeng0804">
-  <title>Archives: 2019 | CodeEdge</title>
+  <title>SQL作业第四弹 | CodeEdge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeEdge">
-<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/archives/2019/index.html">
+  <meta name="description" content="项目十Trips 表中存所有出租车的行程信息，Users 表存所有用户。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL作业第四弹">
+<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/05/21/SQL作业第四弹/index.html">
 <meta property="og:site_name" content="CodeEdge">
+<meta property="og:description" content="项目十Trips 表中存所有出租车的行程信息，Users 表存所有用户。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-21T13:53:43.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeEdge">
+<meta name="twitter:title" content="SQL作业第四弹">
+<meta name="twitter:description" content="项目十Trips 表中存所有出租车的行程信息，Users 表存所有用户。">
   
     <link rel="alternative" href="/atom.xml" title="CodeEdge" type="application/atom+xml">
   
@@ -142,238 +146,170 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-SQL作业第四弹" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      SQL作业第四弹
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/luojianfeng0804/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/21/SQL作业第四弹/" class="archive-article-date">
+
+        
+        <a href="/luojianfeng0804/2019/05/21/SQL作业第四弹/" class="archive-article-date">
   	<time datetime="2019-05-21T13:28:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">SQL作业第四弹</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="项目十"><a href="#项目十" class="headerlink" title="项目十"></a>项目十</h2><p>Trips 表中存所有出租车的行程信息，Users 表存所有用户。<br><a id="more"></a><br>写一段 SQL 语句查出2013年10月1日至2013年10月3日期间非禁止用户的取消率。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Trips (</span><br><span class="line">Id INT,</span><br><span class="line">Client_Id INT,</span><br><span class="line">Driver_Id INT,</span><br><span class="line">City_Id INT,</span><br><span class="line">Status VARCHAR(10),</span><br><span class="line">Request_at DATE,</span><br><span class="line">foreign key(Client_Id) references Users(Users_Id),</span><br><span class="line">foreign key(Driver_Id) references Users(Users_Id)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'1'</span>,<span class="string">'1'</span>,<span class="string">'10'</span>,<span class="string">'1'</span>,<span class="string">'completed'</span>,<span class="string">'2013-10-01'</span>);</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'2'</span>,<span class="string">'2'</span>,<span class="string">'11'</span>,<span class="string">'1'</span>,<span class="string">'cancelled_by_driver'</span>,<span class="string">'2013-10-01'</span> );</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'3'</span>,<span class="string">'3'</span>,<span class="string">'12'</span>,<span class="string">'6'</span>,<span class="string">'completed'</span>,<span class="string">'2013-10-01'</span> );</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'4'</span>,<span class="string">'4'</span>,<span class="string">'13'</span>,<span class="string">'6'</span>,<span class="string">'cancelled_by_client'</span>,<span class="string">'2013-10-01'</span> );</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'5'</span>,<span class="string">'1'</span>,<span class="string">'10'</span>,<span class="string">'1'</span>,<span class="string">'completed'</span>,<span class="string">'2013-10-02'</span>);</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'6'</span>,<span class="string">'2'</span>,<span class="string">'11'</span>,<span class="string">'6'</span>,<span class="string">'completed'</span>,<span class="string">'2013-10-02'</span> );</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'7'</span>,<span class="string">'3'</span>,<span class="string">'12'</span>,<span class="string">'6'</span>,<span class="string">'completed'</span>,<span class="string">'2013-10-02'</span> );</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'8'</span>,<span class="string">'2'</span>,<span class="string">'12'</span>,<span class="string">'12'</span>,<span class="string">'completed'</span>,<span class="string">'2013-10-03'</span> );</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'9'</span>,<span class="string">'3'</span>,<span class="string">'10'</span>,<span class="string">'12'</span>,<span class="string">'completed'</span>,<span class="string">'2013-10-03'</span> );</span><br><span class="line">INSERT INTO Trips  VALUES(<span class="string">'10'</span>,<span class="string">'4'</span>,<span class="string">'13'</span>,<span class="string">'12'</span>,<span class="string">'cancelled_by_driver'</span>,<span class="string">'2013-10-03'</span> );</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CREATE TABLE Users (</span><br><span class="line">Users_Id INT,</span><br><span class="line">Banned CARCHAR(3),</span><br><span class="line">Role VARCHAR(10)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'1'</span>,<span class="string">'No'</span>,<span class="string">'client'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'2'</span>,<span class="string">'Yes'</span>,<span class="string">'client'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'3'</span>,<span class="string">'No'</span>,<span class="string">'client'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'4'</span>,<span class="string">'No'</span>,<span class="string">'client'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'10'</span>,<span class="string">'No'</span>,<span class="string">'driver'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'10'</span>,<span class="string">'No'</span>,<span class="string">'driver'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'11'</span>,<span class="string">'No'</span>,<span class="string">'driver'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'12'</span>,<span class="string">'No'</span>,<span class="string">'driver'</span>);</span><br><span class="line">INSERT INTO Users  VALUES(<span class="string">'13'</span>,<span class="string">'No'</span>,<span class="string">'driver'</span>);</span><br><span class="line"></span><br><span class="line">SELECT Request_at as Day,ROUND(count(Status != <span class="string">'completed'</span> OR NULL)/count(*),2) as <span class="string">"Cancellation Rate"</span></span><br><span class="line">FROM Users,Trips</span><br><span class="line">WHERE Trips.Client_Id = users.Users_Id</span><br><span class="line">AND Banned=<span class="string">"no"</span> AND Request_at BETWEEN <span class="string">"2013-10-1"</span> AND <span class="string">"2013-10-3"</span></span><br><span class="line">GROUP BY Request_at;</span><br></pre></td></tr></table></figure></p>
+<h2 id="项目十一"><a href="#项目十一" class="headerlink" title="项目十一"></a>项目十一</h2><p>输出找出每个部门工资前三高的员工， 将项目7中的employee表清空，重新插入数据<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Employee (</span><br><span class="line">ID INT,</span><br><span class="line">Name VARCHAR(25),</span><br><span class="line">Salary INT,</span><br><span class="line">DepartmentId INT</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">DELETE </span><br><span class="line">FROM Employee;</span><br><span class="line"></span><br><span class="line">INSERT INTO Employee VALUES(1,<span class="string">"Joe"</span>,70000,1);</span><br><span class="line">INSERT INTO Employee VALUES(2,<span class="string">"Henry"</span>,80000,2);</span><br><span class="line">INSERT INTO Employee VALUES(3,<span class="string">"Sam"</span>,60000,2);</span><br><span class="line">INSERT INTO Employee VALUES(4,<span class="string">"Max"</span>,90000,1);</span><br><span class="line">INSERT INTO Employee VALUES(5,<span class="string">"Janet"</span>,69000,1);</span><br><span class="line">INSERT INTO Employee VALUES(6,<span class="string">"Randy"</span>,85000,1);</span><br><span class="line"></span><br><span class="line">SELECT d.Name Department, e.Name Employee2, e.Salary Salary </span><br><span class="line">FROM Employee2 e inner join Department d </span><br><span class="line">ON e.DepartmentId = d.Id</span><br><span class="line">WHERE (</span><br><span class="line">	SELECT COUNT(c.Salary) </span><br><span class="line">	from Employee2 c</span><br><span class="line">	WHERE e.Salary &lt; c.Salary and e.DepartmentId = c.DepartmentId</span><br><span class="line">) &lt; 3</span><br><span class="line">ORDER BY e.DepartmentId, e.Salary DESC;</span><br></pre></td></tr></table></figure></p>
+<h2 id="项目十二"><a href="#项目十二" class="headerlink" title="项目十二"></a>项目十二</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT t.score,</span><br><span class="line">(SELECT COUNT(s.score)+1 </span><br><span class="line">FROM scores s </span><br><span class="line">WHERE s.score&gt;t.score) rank </span><br><span class="line">FROM scores t </span><br><span class="line">ORDER BY t.score DESC;</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://luojianfeng0804.github.io/luojianfeng0804/2019/05/21/SQL作业第四弹/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/" class="archive-article-date">
-  	<time datetime="2019-05-18T12:25:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL作业第三弹</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/">MySQL作业第三弹</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目十"><span class="toc-number">1.</span> <span class="toc-text">项目十</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目十一"><span class="toc-number">2.</span> <span class="toc-text">项目十一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目十二"><span class="toc-number">3.</span> <span class="toc-text">项目十二</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/16/MySQL作业第二弹/" class="archive-article-date">
-  	<time datetime="2019-05-16T11:37:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-16</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/16/MySQL作业第二弹/">MySQL作业第二弹</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/13/MySQL作业第一弹/" class="archive-article-date">
-  	<time datetime="2019-05-13T06:43:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/13/MySQL作业第一弹/">MySQL作业第一弹</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/10/Java基础题3-6/" class="archive-article-date">
-  	<time datetime="2019-05-10T15:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/10/Java基础题3-6/">Java基础题3-6</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/09/Jave基础题1-2/" class="archive-article-date">
-  	<time datetime="2019-05-09T15:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/09/Jave基础题1-2/">Jave基础题1-2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/08/我的第一篇博客文章/" class="archive-article-date">
-  	<time datetime="2019-05-08T14:13:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/08/我的第一篇博客文章/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-07T08:52:32.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -396,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
