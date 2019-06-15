@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://luojianfeng0804.github.io/luojianfeng0804">
-  <title>Archives: 2019 | CodeEdge</title>
+  <title>Java语言 常用API | CodeEdge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeEdge">
-<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/archives/2019/page/2/index.html">
+  <meta name="description" content="API(Applicatiaon Programming Interface),应用程序接口。Java API是JDK中提供给我们实用类的说明文档。 引用类型的一般使用步骤： 1.导包1import 包路径.类名称; 如果需要使用的目标类和当前类在同一个包下，可以省略导包语句 2.创建1类名称 对象名 = new 类名称(); 3.使用1对象名 成员方法名(); Scanner类Scanner类的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java语言 常用API">
+<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/06/14/Java语言-常用API/index.html">
 <meta property="og:site_name" content="CodeEdge">
+<meta property="og:description" content="API(Applicatiaon Programming Interface),应用程序接口。Java API是JDK中提供给我们实用类的说明文档。 引用类型的一般使用步骤： 1.导包1import 包路径.类名称; 如果需要使用的目标类和当前类在同一个包下，可以省略导包语句 2.创建1类名称 对象名 = new 类名称(); 3.使用1对象名 成员方法名(); Scanner类Scanner类的">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-15T11:01:13.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeEdge">
+<meta name="twitter:title" content="Java语言 常用API">
+<meta name="twitter:description" content="API(Applicatiaon Programming Interface),应用程序接口。Java API是JDK中提供给我们实用类的说明文档。 引用类型的一般使用步骤： 1.导包1import 包路径.类名称; 如果需要使用的目标类和当前类在同一个包下，可以省略导包语句 2.创建1类名称 对象名 = new 类名称(); 3.使用1对象名 成员方法名(); Scanner类Scanner类的">
   
     <link rel="alternative" href="/atom.xml" title="CodeEdge" type="application/atom+xml">
   
@@ -142,106 +146,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java语言-常用API" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java语言 常用API
+    </h1>
+  
+
+        
+        <a href="/luojianfeng0804/2019/06/14/Java语言-常用API/" class="archive-article-date">
+  	<time datetime="2019-06-14T13:43:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-14</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>API(Applicatiaon Programming Interface),应用程序接口。Java API是JDK中提供给我们实用类的说明文档。</p>
+<p>引用类型的一般使用步骤：</p>
+<h3 id="1-导包"><a href="#1-导包" class="headerlink" title="1.导包"></a>1.导包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import 包路径.类名称;</span><br></pre></td></tr></table></figure>
+<p>如果需要使用的目标类和当前类在同一个包下，可以省略导包语句</p>
+<h3 id="2-创建"><a href="#2-创建" class="headerlink" title="2.创建"></a>2.创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名称 对象名 = new 类名称();</span><br></pre></td></tr></table></figure>
+<h3 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对象名 成员方法名();</span><br></pre></td></tr></table></figure>
+<h2 id="Scanner类"><a href="#Scanner类" class="headerlink" title="Scanner类"></a>Scanner类</h2><p>Scanner类的功能：可以实现键盘输入数据<br>位于 java.util 包中</p>
+<h3 id="1-导包-1"><a href="#1-导包-1" class="headerlink" title="1.导包"></a>1.导包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br></pre></td></tr></table></figure>
+<h3 id="2-创建-1"><a href="#2-创建-1" class="headerlink" title="2.创建"></a>2.创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner sc = new Scanner(System.in);//System.in代表从键盘输入</span><br></pre></td></tr></table></figure>
+<h3 id="3-获取键盘输入的int数据"><a href="#3-获取键盘输入的int数据" class="headerlink" title="3.获取键盘输入的int数据"></a>3.获取键盘输入的int数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int num = sc.nextInt();//()里写进制，缺省代表十进制</span><br></pre></td></tr></table></figure>
+<h3 id="3-获取键盘输入的字符串"><a href="#3-获取键盘输入的字符串" class="headerlink" title="3.获取键盘输入的字符串"></a>3.获取键盘输入的字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str = sc.next();//键盘输入的其实都是字符串，next表示对这个字符串不做处理</span><br></pre></td></tr></table></figure>
+<h2 id="匿名对象"><a href="#匿名对象" class="headerlink" title="匿名对象"></a>匿名对象</h2><p>匿名对象就是只有右边的对象，没有左边的名字和赋值运算符。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new 类名称();</span><br></pre></td></tr></table></figure></p>
+<p>常用于参数传递以及返回值等只使用一次的类对象</p>
+<h2 id="Random类"><a href="#Random类" class="headerlink" title="Random类"></a>Random类</h2><p>Random类的功能：可以生成随机数<br>位于 java.util 包中</p>
+<h3 id="1-导包-2"><a href="#1-导包-2" class="headerlink" title="1.导包"></a>1.导包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br></pre></td></tr></table></figure>
+<h3 id="2-创建-2"><a href="#2-创建-2" class="headerlink" title="2.创建"></a>2.创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Random r = new Random();</span><br></pre></td></tr></table></figure>
+<h3 id="3-获取int型随机数"><a href="#3-获取int型随机数" class="headerlink" title="3.获取int型随机数"></a>3.获取int型随机数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int num = r.nextInt();//()里缺省代表所有int型数值都可以</span><br><span class="line">//参数代表范围，一个左闭右开区间，如()里是3，可能的取值范围是0~2</span><br></pre></td></tr></table></figure>
+<h2 id="对象数组与ArrayList集合"><a href="#对象数组与ArrayList集合" class="headerlink" title="对象数组与ArrayList集合"></a>对象数组与ArrayList集合</h2><p>比如定义了一个Person类，可以用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person [] array = new Person[3] //用array来放置3个Person的对象</span><br></pre></td></tr></table></figure></p>
+<p>但是对象数组有个严重的问题，一旦创建，程序运行期间长度不变<br>而ArrayList的长度可以改变，这个类也在java.util包中<br>对于ArrayList来说，有一个<e>代表泛型（代表装在集合中的所有元素，全都是统一的什么类型）。</e></p>
+<h3 id="1-导包-3"><a href="#1-导包-3" class="headerlink" title="1.导包"></a>1.导包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import java.util.ArrayList;</span><br></pre></td></tr></table></figure>
+<h3 id="2-创建-3"><a href="#2-创建-3" class="headerlink" title="2.创建"></a>2.创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;string&gt; list = new ArrayList&lt;string&gt;();</span><br><span class="line">//对于ArrayList来说，直接打印得到的不是地址值，而是内容。内容是空，得到的是空的[]</span><br></pre></td></tr></table></figure>
+<h3 id="3-常用方法"><a href="#3-常用方法" class="headerlink" title="3.常用方法"></a>3.常用方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public boolean add(E e);//括号里必须写声明的类型</span><br><span class="line">public E get(int index);//从集合中读取数据,参数是索引编号</span><br><span class="line">public E remove(int index);//从集合中删除数据,参数是索引编号，返回值是删除的数据</span><br><span class="line">public int size();//获取集合的长度，元素的个数</span><br></pre></td></tr></table></figure>
+<p>注意：泛型中E只能是引用类型，不能是基本类型<br>如果希望向集合Array List当中存储基本类型数据，必须使用基本类型对应的“包装类”<br> | 基本类型 | 包装类          |<br> |:-:| :-: |<br> | byte    |Byte              |<br> | short   | Short            |<br> | int     | Integer【特殊】  |<br> | long    | Long             |<br> | float   | Float            |<br> | double  | Double           |<br> | char    | Character【特殊】|<br> | boolean | Boolean          | </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/luojianfeng0804/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/09/Jave基础题1-2/" class="archive-article-date">
-  	<time datetime="2019-05-09T15:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/09/Jave基础题1-2/">Jave基础题1-2</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://luojianfeng0804.github.io/luojianfeng0804/2019/06/14/Java语言-常用API/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/08/我的第一篇博客文章/" class="archive-article-date">
-  	<time datetime="2019-05-08T14:13:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/luojianfeng0804/2019/05/27/Java基础题20-24/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础题20-24</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/08/我的第一篇博客文章/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-导包"><span class="toc-number">1.</span> <span class="toc-text">1.导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-创建"><span class="toc-number">2.</span> <span class="toc-text">2.创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-使用"><span class="toc-number">3.</span> <span class="toc-text">3.使用</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Scanner类"><span class="toc-number"></span> <span class="toc-text">Scanner类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-导包-1"><span class="toc-number">1.</span> <span class="toc-text">1.导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-创建-1"><span class="toc-number">2.</span> <span class="toc-text">2.创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-获取键盘输入的int数据"><span class="toc-number">3.</span> <span class="toc-text">3.获取键盘输入的int数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-获取键盘输入的字符串"><span class="toc-number">4.</span> <span class="toc-text">3.获取键盘输入的字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匿名对象"><span class="toc-number"></span> <span class="toc-text">匿名对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Random类"><span class="toc-number"></span> <span class="toc-text">Random类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-导包-2"><span class="toc-number">1.</span> <span class="toc-text">1.导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-创建-2"><span class="toc-number">2.</span> <span class="toc-text">2.创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-获取int型随机数"><span class="toc-number">3.</span> <span class="toc-text">3.获取int型随机数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象数组与ArrayList集合"><span class="toc-number"></span> <span class="toc-text">对象数组与ArrayList集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-导包-3"><span class="toc-number">1.</span> <span class="toc-text">1.导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-创建-3"><span class="toc-number">2.</span> <span class="toc-text">2.创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-常用方法"><span class="toc-number">3.</span> <span class="toc-text">3.常用方法</span></a></li></ol>
+                    </li></div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/05/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-07T08:52:32.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/05/07/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/luojianfeng0804/archives/2019/">&laquo; Prev</a><a class="page-number" href="/luojianfeng0804/archives/2019/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
   
 
 
@@ -265,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
