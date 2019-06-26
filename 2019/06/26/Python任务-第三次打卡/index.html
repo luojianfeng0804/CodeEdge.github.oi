@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://luojianfeng0804.github.io/luojianfeng0804">
-  <title>CodeEdge</title>
+  <title>Python任务 第三次打卡  | CodeEdge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeEdge">
-<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/index.html">
+  <meta name="description" content="字典">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python任务 第三次打卡 ">
+<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/06/26/Python任务-第三次打卡/index.html">
 <meta property="og:site_name" content="CodeEdge">
+<meta property="og:description" content="字典">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T15:58:06.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeEdge">
+<meta name="twitter:title" content="Python任务 第三次打卡 ">
+<meta name="twitter:description" content="字典">
   
     <link rel="alternative" href="/atom.xml" title="CodeEdge" type="application/atom+xml">
   
@@ -142,16 +146,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Python任务-第三次打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Python任务-第三次打卡" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/06/26/Python任务-第三次打卡/">Python任务 第三次打卡 </a>
+    <h1 class="article-title" itemprop="name">
+      Python任务 第三次打卡 
     </h1>
   
 
@@ -164,10 +166,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a><a href="https://www.runoob.com/python/python-dictionary.html" target="_blank" rel="noopener">字典</a></h2>
-        
+        <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a><a href="https://www.runoob.com/python/python-dictionary.html" target="_blank" rel="noopener">字典</a></h2><a id="more"></a>
+<p>字典(dictionary)是除列表以外python之中最灵活的内置数据结构类型。列表是有序的对象集合，字典是无序的对象集合。<br>两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。<br>字典用”{ }”标识。字典由索引(key)和它对应的值value组成。<br>简单的操作如下：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; dict = &#123;&#125;</span><br><span class="line">&gt;&gt;&gt; dict[&apos;one&apos;] = &quot;This is one&quot;</span><br><span class="line">&gt;&gt;&gt; dict[2] = &quot;This is two&quot;</span><br><span class="line">... print (dict[&apos;one&apos;])          # 输出键为&apos;one&apos; 的值</span><br><span class="line">This is one</span><br><span class="line">&gt;&gt;&gt; print (dict[2])              # 输出键为 2 的值</span><br><span class="line">This is two</span><br></pre></td></tr></table></figure></p>
+<p>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; tinydict = &#123;&apos;name&apos;: &apos;john&apos;,&apos;code&apos;:6734, &apos;dept&apos;: &apos;sales&apos;&#125;</span><br><span class="line">&gt;&gt;&gt; print (tinydict)             # 输出完整的字典</span><br><span class="line">&#123;&apos;name&apos;: &apos;john&apos;, &apos;code&apos;: 6734, &apos;dept&apos;: &apos;sales&apos;&#125;</span><br><span class="line">&gt;&gt;&gt; print (tinydict.keys())      # 输出所有键</span><br><span class="line">dict_keys([&apos;name&apos;, &apos;code&apos;, &apos;dept&apos;])</span><br><span class="line">&gt;&gt;&gt; print (tinydict.values())    # 输出所有值</span><br><span class="line">dict_values([&apos;john&apos;, 6734, &apos;sales&apos;])</span><br></pre></td></tr></table></figure></p>
+<p>字典的每个键值 key=&gt;value 对用冒号 : 分割，每个键值对之间用逗号 , 分割，整个字典包括在花括号 {} 中 ,键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一。<br>格式如下所示：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; d = &#123;&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;b&apos;: &apos;3&apos;&#125;</span><br><span class="line">&gt;&gt;&gt; d[&apos;b&apos;]</span><br><span class="line">&apos;3&apos;</span><br><span class="line">&gt;&gt;&gt; d</span><br><span class="line">&#123;&apos;a&apos;: 1, &apos;b&apos;: &apos;3&apos;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>向字典添加新内容的方法是增加新的键/值对，修改或删除已有键/值对如下实例:<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; d = &#123;&apos;a&apos;: 1, &apos;b&apos;: 2&#125;</span><br><span class="line">&gt;&gt;&gt; d[&apos;a&apos;] = 4            #修改字典的数据</span><br><span class="line">&gt;&gt;&gt; d[&apos;c&apos;] = 5            #添加字典里的数据</span><br><span class="line">&gt;&gt;&gt; print (d)             # 输出完整的字典</span><br><span class="line">&#123;&apos;a&apos;: 4, &apos;b&apos;: 2, &apos;c&apos;: 5&#125;</span><br><span class="line">&gt;&gt;&gt; del d[&apos;b&apos;]            # 删除键是&apos;Name&apos;的条目</span><br><span class="line">&gt;&gt;&gt; print (d)             # 输出完整的字典</span><br><span class="line">&#123;&apos;a&apos;: 4, &apos;c&apos;: 5&#125;</span><br><span class="line">&gt;&gt;&gt; d.clear()             # 清空字典所有条目</span><br><span class="line">&gt;&gt;&gt; print (d)             # 输出完整的字典</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行，如下实例：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; dict = &#123;[&apos;Name&apos;]: &apos;Zara&apos;, &apos;Age&apos;: 7&#125;</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">TypeError: unhashable type: &apos;list&apos;</span><br></pre></td></tr></table></figure></p>
+<p>Python字典包含了以下内置函数：<br>|序号 |函数及描述|<br>|:-:| :-: |<br>|1| cmp(dict1, dict2) 比较两个字典元素。                             |<br>|2| len(dict) 计算字典元素个数，即键的总数。                         |<br>|3| str(dict) 输出字典可打印的字符串表示。                           |<br>|4| type(variable) 返回输入的变量类型，如果变量是字典就返回字典类型。|<br>Python字典包含了以下内置方法：<br>|序号|函数及描述|<br>|:-:| :-: |<br>|1|dict.clear()<br>删除字典内所有元素|<br>|2|dict.copy()<br>返回一个字典的浅复制|<br>|3|dict.fromkeys(seq[, val])<br>创建一个新字典，以序列 seq 中元素做字典的键，val 为字典所有键对应的初始值|<br>|4|dict.get(key, default=None)<br>返回指定键的值，如果值不在字典中返回default值|<br>|5|dict.has_key(key)<br>如果键在字典dict里返回true，否则返回false|<br>|6|dict.items()<br>以列表返回可遍历的(键, 值) 元组数组|<br>|7|dict.keys()<br>以列表返回一个字典所有的键|<br>|8|dict.setdefault(key, default=None)<br>和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default|<br>|9|dict.update(dict2)<br>把字典dict2的键/值对更新到dict里|<br>|10|dict.values()<br>以列表返回字典中的所有值|<br>|11|pop(key[,default])<br>删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。|<br>|12|popitem()<br>随机返回并删除字典中的一对键和值。|</p>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a><a href="https://www.runoob.com/python3/python3-set.html" target="_blank" rel="noopener">集合</a></h2><p>集合（set）是一个无序的不重复元素序列。<br>可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。<br>创建格式：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parame = &#123;value01,value02,...&#125;</span><br><span class="line">或者</span><br><span class="line">set(value)</span><br></pre></td></tr></table></figure></p>
+<h3 id="集合的基本操作"><a href="#集合的基本操作" class="headerlink" title="集合的基本操作"></a>集合的基本操作</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">函数及描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1、添加元素</td>
+<td style="text-align:center">s.add( x )</td>
+</tr>
+</tbody>
+</table>
+<p>将元素 x 添加到集合 s 中，如果元素已存在，则不进行任何操作。<br>或s.update( x )<br>x 可以有多个，用逗号分开。|<br>|2、移除元素|s.remove( x )<br>将元素 x 从集合 s 中移除，如果元素不存在，则会发生错误<br>或s.discard( x )<br>如果元素不存在，也不会发生错误。<br>s.pop()<br>在脚本模式下可以随机删除一个元素，交互模式则是删除最后一个|<br>|3、计算集合元素个数|len(s)<br>计算集合 s 元素个数。|<br>|4、清空集合|s.clear()<br>清空集合 s。|<br>|5、判断元素是否在集合中存在|x in s<br>判断元素 x 是否在集合 s 中，存在返回 True，不存在返回 False。|<br><a href="https://www.runoob.com/python3/python3-set.html" target="_blank" rel="noopener">完整方法列表看这里</a></p>
+<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a><a href="https://www.runoob.com/python3/python3-conditional-statements.html" target="_blank" rel="noopener">判断语句</a></h2><p>Python中if语句的一般形式如下所示：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if condition_1:</span><br><span class="line">    statement_block_1</span><br><span class="line">elif condition_2:</span><br><span class="line">    statement_block_2</span><br><span class="line">else:</span><br><span class="line">    statement_block_3</span><br></pre></td></tr></table></figure></p>
+<p>举个例子：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = 4</span><br><span class="line">&gt;&gt;&gt; if a ==3:</span><br><span class="line">...  print(&apos;true&apos;)</span><br><span class="line">... elif a==4:</span><br><span class="line">...  print(&quot;true&quot;)</span><br><span class="line">... else:</span><br><span class="line">...  print(&apos;false&apos;)</span><br><span class="line">...</span><br><span class="line">true</span><br></pre></td></tr></table></figure></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -176,16 +223,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/06/26/Python任务-第三次打卡/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://luojianfeng0804.github.io/luojianfeng0804/2019/06/26/Python任务-第三次打卡/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/luojianfeng0804/2019/06/23/Python任务-第二次打卡/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python任务 第二次打卡 </div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -200,587 +306,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python任务-第二次打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/06/23/Python任务-第二次打卡/">Python任务 第二次打卡 </a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/06/23/Python任务-第二次打卡/" class="archive-article-date">
-  	<time datetime="2019-06-23T15:18:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="列表（list）"><a href="#列表（list）" class="headerlink" title="列表（list）"></a>列表（list）</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/06/23/Python任务-第二次打卡/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#字典"><span class="toc-number">1.</span> <span class="toc-text">字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#集合"><span class="toc-number">2.</span> <span class="toc-text">集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#集合的基本操作"><span class="toc-number">2.1.</span> <span class="toc-text">集合的基本操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断语句"><span class="toc-number">3.</span> <span class="toc-text">判断语句</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-Python任务-第一次打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/06/21/Python任务-第一次打卡/">Python任务 第一次打卡</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/06/21/Python任务-第一次打卡/" class="archive-article-date">
-  	<time datetime="2019-06-21T09:34:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、环境搭建：anaconda环境配置、解释器"><a href="#一、环境搭建：anaconda环境配置、解释器" class="headerlink" title="一、环境搭建：anaconda环境配置、解释器"></a>一、环境搭建：anaconda环境配置、解释器</h2><h3 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1.环境搭建"></a>1.环境搭建</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/06/21/Python任务-第一次打卡/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java语言-常用API" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/06/14/Java语言-常用API/">Java语言 常用API</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/06/14/Java语言-常用API/" class="archive-article-date">
-  	<time datetime="2019-06-14T13:43:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>API(Applicatiaon Programming Interface),应用程序接口。Java API是JDK中提供给我们实用类的说明文档。<br></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/06/14/Java语言-常用API/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础题20-24" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/27/Java基础题20-24/">Java基础题20-24</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/27/Java基础题20-24/" class="archive-article-date">
-  	<time datetime="2019-05-27T14:01:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="求20项之和"><a href="#求20项之和" class="headerlink" title="求20项之和"></a>求20项之和</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/27/Java基础题20-24/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础题15-19" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/26/Java基础题15-19/">Java基础题15-19</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/26/Java基础题15-19/" class="archive-article-date">
-  	<time datetime="2019-05-26T14:34:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p><img src="/luojianfeng0804/2019/05/26/Java基础题15-19/1.jpg" alt><br>这道排序题还真只是道排序题啊，本来想用C++里的swap函数，但是不知道Java里面传递地址，所以就大概写了看起来更繁琐<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class work15 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int x,y,z;</span><br><span class="line">        Scanner <span class="keyword">in</span>=new Scanner(System.in); //使用Scanner类定义对象</span><br><span class="line">        System.out.println(<span class="string">"please input x"</span>);</span><br><span class="line">        x=in.nextInt(); //接收整形数据</span><br><span class="line">        System.out.println(<span class="string">"please input y"</span>);</span><br><span class="line">        y=in.nextInt();</span><br><span class="line">        System.out.println(<span class="string">"please input z"</span>);</span><br><span class="line">        z=in.nextInt();</span><br><span class="line">        ChangPlace(x,y,z);</span><br><span class="line">    &#125;</span><br><span class="line">    private static void ChangPlace(int a,int b,int c)&#123;</span><br><span class="line">        int d;</span><br><span class="line">        <span class="keyword">if</span> (a&gt;b)&#123;</span><br><span class="line">            d = a;</span><br><span class="line">            a = b;</span><br><span class="line">            b = d;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (a&gt;c)&#123;</span><br><span class="line">            d = a;</span><br><span class="line">            a = c;</span><br><span class="line">            c = d;</span><br><span class="line">         &#125;</span><br><span class="line">        <span class="keyword">if</span> (b&gt;c)&#123;</span><br><span class="line">            d = b;</span><br><span class="line">            b = c;</span><br><span class="line">            c = d;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(a+<span class="string">","</span>+b+<span class="string">","</span>+c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="输出9-9乘法表"><a href="#输出9-9乘法表" class="headerlink" title="输出9*9乘法表"></a>输出9*9乘法表</h2><p><img src="/luojianfeng0804/2019/05/26/Java基础题15-19/2.jpg" alt><br>这题很容易，就是循环的嵌套<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class Work16 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 1;i&lt;=9;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (int k = 1;k&lt;=i;k++)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">"*"</span>+k+<span class="string">"="</span>+i*k);</span><br><span class="line">                <span class="keyword">if</span> (k == i)&#123;</span><br><span class="line">                    System.out.println();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    System.out.print(<span class="string">" "</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="猴子吃桃问题"><a href="#猴子吃桃问题" class="headerlink" title="猴子吃桃问题"></a>猴子吃桃问题</h2><p><img src="/luojianfeng0804/2019/05/26/Java基础题15-19/3.jpg" alt><br>这题主要是循环的次数的问题，很容易<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Work17 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int sum = 1;</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; 9; i++) &#123;</span><br><span class="line">            sum = (sum + 1)*2;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="输出菱形"><a href="#输出菱形" class="headerlink" title="输出菱形"></a>输出菱形</h2><p>这题的循环我调试挺久的，主要是里面的规律还是需要一点时间分析，开始把规律搞错了，这就是在错误中改正嘛<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class Work19 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        <span class="keyword">for</span> (int i = 1; i &lt;= 7; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i&lt;4)&#123;</span><br><span class="line">                <span class="keyword">for</span> (int k = 1; k &lt;= 7; k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (k &lt;= 8-2*i)&#123;</span><br><span class="line">                        System.out.print(<span class="string">" "</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> &#123;</span><br><span class="line">                        System.out.print(<span class="string">"*"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (int k = 1; k &lt;= 7; k++)&#123;</span><br><span class="line">                    <span class="keyword">if</span> (k &lt;= 2*(i - 4))&#123;</span><br><span class="line">                        System.out.print(<span class="string">" "</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span>&#123;</span><br><span class="line">                        System.out.print(<span class="string">"*"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/26/Java基础题15-19/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础题11-14" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/25/Java基础题11-14/">Java基础题11-14</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/25/Java基础题11-14/" class="archive-article-date">
-  	<time datetime="2019-05-25T14:08:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="求不重复数字"><a href="#求不重复数字" class="headerlink" title="求不重复数字"></a>求不重复数字</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/25/Java基础题11-14/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础题7-10题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/24/Java基础题7-10题/">Java基础题7-10题</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/24/Java基础题7-10题/" class="archive-article-date">
-  	<time datetime="2019-05-24T13:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="处理字符串"><a href="#处理字符串" class="headerlink" title="处理字符串"></a>处理字符串</h2><p><img src="/luojianfeng0804/2019/05/24/Java基础题7-10题/1.jpg" alt><br>这里问题主要出现在字符串的处理上<br></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/24/Java基础题7-10题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SQL作业第四弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">SQL作业第四弹</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/21/SQL作业第四弹/" class="archive-article-date">
-  	<time datetime="2019-05-21T13:28:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="项目十"><a href="#项目十" class="headerlink" title="项目十"></a>项目十</h2><p>Trips 表中存所有出租车的行程信息，Users 表存所有用户。<br></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySQL作业第三弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/">MySQL作业第三弹</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/" class="archive-article-date">
-  	<time datetime="2019-05-18T12:25:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="文件转换"><a href="#文件转换" class="headerlink" title="文件转换"></a>文件转换</h2><p>这里尝试了使用Navicat图形化界面来将SQL文件转换成CSV文件但是惊奇的发现导出文件里竟然没有CSV类型<br></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/luojianfeng0804/page/2/">2</a><a class="extend next" rel="next" href="/luojianfeng0804/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -803,8 +354,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
