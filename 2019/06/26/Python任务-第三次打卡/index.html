@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="CodeEdge">
 <meta property="og:description" content="字典">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-27T13:56:49.181Z">
+<meta property="og:updated_time" content="2019-06-27T14:05:16.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python任务 第三次打卡 ">
 <meta name="twitter:description" content="字典">
@@ -210,11 +210,54 @@
 <tbody>
 <tr>
 <td style="text-align:center">1</td>
-<td style="text-align:center">dict.clear()</td>
+<td style="text-align:center">dict.clear()删除字典内所有元素</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">dict.copy()返回一个字典的浅复制</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">dict.fromkeys(seq[, val])创建一个新字典，以序列 seq 中元素做字典的键，val 为字典所有键对应的初始值</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">dict.get(key, default=None)返回指定键的值，如果值不在字典中返回default值</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">dict.has_key(key)如果键在字典dict里返回true，否则返回false</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">dict.items()以列表返回可遍历的(键, 值) 元组数组</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">dict.keys()以列表返回一个字典所有的键</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">dict.setdefault(key, default=None)和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">dict.update(dict2)把字典dict2的键/值对更新到dict里</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">dict.values()以列表返回字典中的所有值</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">pop(key[,default])删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">popitem()随机返回并删除字典中的一对键和值。</td>
 </tr>
 </tbody>
 </table>
-<p>删除字典内所有元素|<br>|2|dict.copy()<br>返回一个字典的浅复制|<br>|3|dict.fromkeys(seq[, val])<br>创建一个新字典，以序列 seq 中元素做字典的键，val 为字典所有键对应的初始值|<br>|4|dict.get(key, default=None)<br>返回指定键的值，如果值不在字典中返回default值|<br>|5|dict.has_key(key)<br>如果键在字典dict里返回true，否则返回false|<br>|6|dict.items()<br>以列表返回可遍历的(键, 值) 元组数组|<br>|7|dict.keys()<br>以列表返回一个字典所有的键|<br>|8|dict.setdefault(key, default=None)<br>和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default|<br>|9|dict.update(dict2)<br>把字典dict2的键/值对更新到dict里|<br>|10|dict.values()<br>以列表返回字典中的所有值|<br>|11|pop(key[,default])<br>删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。|<br>|12|popitem()<br>随机返回并删除字典中的一对键和值。|</p>
 <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a><a href="https://www.runoob.com/python3/python3-set.html" target="_blank" rel="noopener">集合</a></h2><p>集合（set）是一个无序的不重复元素序列。<br>可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。<br>创建格式：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parame = &#123;value01,value02,...&#125;</span><br><span class="line">或者</span><br><span class="line">set(value)</span><br></pre></td></tr></table></figure></p>
 <h3 id="集合的基本操作"><a href="#集合的基本操作" class="headerlink" title="集合的基本操作"></a>集合的基本操作</h3><table>
 <thead>
@@ -226,11 +269,27 @@
 <tbody>
 <tr>
 <td style="text-align:center">1、添加元素</td>
-<td style="text-align:center">s.add( x )</td>
+<td style="text-align:center">s.add( x )将元素 x 添加到集合 s 中，如果元素已存在，则不进行任何操作。或s.update( x )x 可以有多个，用逗号分开。</td>
+</tr>
+<tr>
+<td style="text-align:center">2、移除元素</td>
+<td style="text-align:center">s.remove( x )将元素 x 从集合 s 中移除，如果元素不存在，则会发生错误或s.discard( x )如果元素不存在，也不会发生错误。s.pop()在脚本模式下可以随机删除一个元素，交互模式则是删除最后一个</td>
+</tr>
+<tr>
+<td style="text-align:center">3、计算集合元素个数</td>
+<td style="text-align:center">len(s)计算集合 s 元素个数。</td>
+</tr>
+<tr>
+<td style="text-align:center">4、清空集合</td>
+<td style="text-align:center">s.clear()清空集合 s。</td>
+</tr>
+<tr>
+<td style="text-align:center">5、判断元素是否在集合中存在</td>
+<td style="text-align:center">x in s判断元素 x 是否在集合 s 中，存在返回 True，不存在返回 False。</td>
 </tr>
 </tbody>
 </table>
-<p>将元素 x 添加到集合 s 中，如果元素已存在，则不进行任何操作。<br>或s.update( x )<br>x 可以有多个，用逗号分开。|<br>|2、移除元素|s.remove( x )<br>将元素 x 从集合 s 中移除，如果元素不存在，则会发生错误<br>或s.discard( x )<br>如果元素不存在，也不会发生错误。<br>s.pop()<br>在脚本模式下可以随机删除一个元素，交互模式则是删除最后一个|<br>|3、计算集合元素个数|len(s)<br>计算集合 s 元素个数。|<br>|4、清空集合|s.clear()<br>清空集合 s。|<br>|5、判断元素是否在集合中存在|x in s<br>判断元素 x 是否在集合 s 中，存在返回 True，不存在返回 False。|<br><a href="https://www.runoob.com/python3/python3-set.html" target="_blank" rel="noopener">完整方法列表看这里</a></p>
+<p><a href="https://www.runoob.com/python3/python3-set.html" target="_blank" rel="noopener">完整方法列表看这里</a></p>
 <h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a><a href="https://www.runoob.com/python3/python3-conditional-statements.html" target="_blank" rel="noopener">判断语句</a></h2><p>Python中if语句的一般形式如下所示：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if condition_1:</span><br><span class="line">    statement_block_1</span><br><span class="line">elif condition_2:</span><br><span class="line">    statement_block_2</span><br><span class="line">else:</span><br><span class="line">    statement_block_3</span><br></pre></td></tr></table></figure></p>
 <p>举个例子：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = 4</span><br><span class="line">&gt;&gt;&gt; if a ==3:</span><br><span class="line">...  print(&apos;true&apos;)</span><br><span class="line">... elif a==4:</span><br><span class="line">...  print(&quot;true&quot;)</span><br><span class="line">... else:</span><br><span class="line">...  print(&apos;false&apos;)</span><br><span class="line">...</span><br><span class="line">true</span><br></pre></td></tr></table></figure></p>
 <h2 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h2><p>Python中三目运算符其实就是选择语句的变体<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a if b else c</span><br></pre></td></tr></table></figure></p>
