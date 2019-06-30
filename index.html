@@ -144,6 +144,174 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python任务-第四次打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/luojianfeng0804/2019/06/29/Python任务-第四次打卡/">Python任务-第四次打卡</a>
+    </h1>
+  
+
+        
+        <a href="/luojianfeng0804/2019/06/29/Python任务-第四次打卡/" class="archive-article-date">
+  	<time datetime="2019-06-29T14:51:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<p>定义一个函数<br>你可以定义一个由自己想要功能的函数，以下是简单的规则：<br>函数代码块以 def 关键词开头，后接函数标识符名称和圆括号()。<br>任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。<br>函数的第一行语句可以选择性地使用文档字符串—用于存放函数说明。<br>函数内容以冒号起始，并且缩进。<br>return [表达式] 结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回 None。<br>可更改(mutable)与不可更改(immutable)对象<br>以下是调用函数时可使用的正式参数类型：</p>
+<ul>
+<li>必需参数</li>
+<li>关键字参数</li>
+<li>默认参数</li>
+<li>不定长参数<br>在 python 中，strings, tuples, 和 numbers 是不可更改的对象，而 list,dict 等则是可以修改的对象。<br>参数<h2 id="必需参数"><a href="#必需参数" class="headerlink" title="必需参数"></a><a href="https://www.runoob.com/python3/python3-function.html" target="_blank" rel="noopener">必需参数</a></h2>必需参数须以正确的顺序传入函数。调用时的数量必须和声明时的一样。<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a><a href="https://www.runoob.com/python3/python3-function.html" target="_blank" rel="noopener">关键字</a></h2>关键字参数和函数调用关系紧密，函数调用使用关键字参数来确定传入的参数值。<br>使用关键字参数允许函数调用时参数的顺序与声明时不一致，因为 Python 解释器能够用参数名匹配参数值。<h2 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h2>调用函数时，如果没有传递参数，则会使用默认参数。<br>例如：<br><img src="/luojianfeng0804/2019/06/29/Python任务-第四次打卡/1.jpg" alt><br><img src="/luojianfeng0804/2019/06/29/Python任务-第四次打卡/2.jpg" alt><br><img src="/luojianfeng0804/2019/06/29/Python任务-第四次打卡/3.jpg" alt><h2 id="不定长参数"><a href="#不定长参数" class="headerlink" title="不定长参数"></a>不定长参数</h2>你可能需要一个函数能处理比当初声明时更多的参数。这些参数叫做不定长参数，和上述 2 种参数不同，声明时不会命名。<br>Python 允许在形参前面添加一个星号（*），这样就意味着该参数可接收多个参数值，多个参数值被当成元组传入。比如:<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def printABC(a,*b,**c)</span><br><span class="line">    ......</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>加了星号 * 的参数会以元组(tuple)的形式导入，存放所有未命名的变量参数。加了两个星号 ** 的参数会以字典的形式导入。</p>
+<h2 id="返回值的应用"><a href="#返回值的应用" class="headerlink" title="返回值的应用"></a>返回值的应用</h2><p>举个实例<br><img src="/luojianfeng0804/2019/06/29/Python任务-第四次打卡/4.jpg" alt></p>
+<h2 id="File-文件-方法"><a href="#File-文件-方法" class="headerlink" title="File(文件) 方法"></a>File(文件) 方法</h2><p>open() 方法<br>Python open() 方法用于打开一个文件，并返回文件对象，在对文件进行处理过程都需要使用到这个函数，如果该文件无法被打开，会抛出 OSError。<br>注意：使用 open() 方法一定要保证关闭文件对象，即调用 close() 方法。<br>open() 函数常用形式是接收两个参数：文件名(file)和模式(mode)。<br>完整的语法格式为：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open(file, mode=&apos;r&apos;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>file: 必需，文件路径（相对或者绝对路径）。</li>
+<li>mode: 可选，文件打开模式</li>
+<li>buffering: 设置缓冲</li>
+<li>encoding: 一般使用utf8</li>
+<li>errors: 报错级别</li>
+<li>newline: 区分换行符</li>
+<li>closefd: 传入的file参数类型</li>
+<li>opener:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">t</td>
+<td style="text-align:center">文本模式 (默认)</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">写模式，新建一个文件，如果该文件已存在则会报错</td>
+</tr>
+<tr>
+<td style="text-align:center">b</td>
+<td style="text-align:center">二进制模式</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">打开一个文件进行更新(可读可写)</td>
+</tr>
+<tr>
+<td style="text-align:center">U</td>
+<td style="text-align:center">通用换行模式（不推荐）</td>
+</tr>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式</td>
+</tr>
+<tr>
+<td style="text-align:center">rb</td>
+<td style="text-align:center">以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。一般用于非文本文件如图</td>
+</tr>
+<tr>
+<td style="text-align:center">r+</td>
+<td style="text-align:center">打开一个文件用于读写。文件指针将会放在文件的开头</td>
+</tr>
+<tr>
+<td style="text-align:center">rb+</td>
+<td style="text-align:center">以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。一般用于非文本文件如图片等</td>
+</tr>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:center">打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件</td>
+</tr>
+<tr>
+<td style="text-align:center">wb</td>
+<td style="text-align:center">以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等</td>
+</tr>
+<tr>
+<td style="text-align:center">w+</td>
+<td style="text-align:center">打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件</td>
+</tr>
+<tr>
+<td style="text-align:center">wb+</td>
+<td style="text-align:center">以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等</td>
+</tr>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:center">打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入</td>
+</tr>
+<tr>
+<td style="text-align:center">ab</td>
+<td style="text-align:center">以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入</td>
+</tr>
+<tr>
+<td style="text-align:center">a+</td>
+<td style="text-align:center">打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写</td>
+</tr>
+<tr>
+<td style="text-align:center">ab+</td>
+<td style="text-align:center">以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写</td>
+</tr>
+</tbody>
+</table>
+<p>默认为文本模式，如果要以二进制模式打开，加上 b 。<br><a href="https://www.runoob.com/python3/python3-file-methods.html" target="_blank" rel="noopener">具体file方法参考此处链接</a></p>
+<h3 id="excel及csv文件操作"><a href="#excel及csv文件操作" class="headerlink" title="excel及csv文件操作"></a>excel及csv文件操作</h3><p>python操作excel主要用到xlrd和xlwt这两个库，即xlrd是读excel，xlwt是写excel的库<br>每一个Excel数据文件从上至下分为三个层级的对象：</p>
+<ul>
+<li>workbook： 每一个Excel文件就是一个workbook。</li>
+<li>sheet： 每一个workbook中可以包含多个sheet，具体就对应Excel中我们在左下脚所看到的“sheet1”,“sheet2”等。</li>
+<li>cell： 每一个sheet就是我们通常所看到的一个表格，可以含有m行，n列，每个确定的行号，列号所对应的一个格子就是一个cell。<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#打开excel文件</span><br><span class="line">data=xlrd.open_workbook(&apos;data.xlsx&apos;)     </span><br><span class="line">#获取第一张工作表（通过索引的方式）</span><br><span class="line">table=data.sheets()[0] </span><br><span class="line">#data_list用来存放数据</span><br><span class="line">data_list=[]    </span><br><span class="line">#将table中第一行的数据读取并添加到data_list中</span><br><span class="line">data_list.extend(table.row_values(0))</span><br><span class="line">#打印出第一行的全部数据</span><br><span class="line">for item in data_list:</span><br><span class="line">    print item</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="OS模块"><a href="#OS模块" class="headerlink" title="OS模块"></a><a href="https://www.runoob.com/python3/python3-os-file-methods.html" target="_blank" rel="noopener">OS模块</a></h2><h2 id="datatime模块"><a href="#datatime模块" class="headerlink" title="datatime模块"></a><a href="https://docs.python.org/zh-cn/3.7/library/datetime.html#module-datetime" target="_blank" rel="noopener">datatime模块</a></h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/luojianfeng0804/2019/06/29/Python任务-第四次打卡/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python任务-第三次打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -685,69 +853,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySQL作业第三弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/">MySQL作业第三弹</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/" class="archive-article-date">
-  	<time datetime="2019-05-18T12:25:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="文件转换"><a href="#文件转换" class="headerlink" title="文件转换"></a>文件转换</h2><p>这里尝试了使用Navicat图形化界面来将SQL文件转换成CSV文件但是惊奇的发现导出文件里竟然没有CSV类型<br></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/18/MySQL作业第三弹/">展开全文 >></a>
         </p>
       
 
