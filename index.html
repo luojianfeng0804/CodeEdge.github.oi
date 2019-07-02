@@ -144,6 +144,154 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python任务-第五次打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/luojianfeng0804/2019/07/02/Python任务-第五次打卡/">Python任务-第五次打卡 </a>
+    </h1>
+  
+
+        
+        <a href="/luojianfeng0804/2019/07/02/Python任务-第五次打卡/" class="archive-article-date">
+  	<time datetime="2019-07-02T00:21:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a><a href="https://www.runoob.com/python3/python3-class.html" target="_blank" rel="noopener">类与对象</a></h2><h3 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h3><p>Python中的类与对象的思想与C++、Java十分相似，区别主要在语法方面。<br>类的申明：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class ClassName:</span><br><span class="line">    &lt;statement-1&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    &lt;statement-N&gt;</span><br></pre></td></tr></table></figure></p>
+<p>类有一个名为 <strong>init</strong>() 的特殊方法（构造方法），该方法在类实例化时会自动调用，像下面这样：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self):</span><br><span class="line">    self.data = []</span><br></pre></td></tr></table></figure></p>
+<p>当然， <strong>init</strong>() 方法可以有参数，参数通过 <strong>init</strong>() 传递到类的实例化操作上。例如:<br><img src="/luojianfeng0804/2019/07/02/Python任务-第五次打卡/1.jpg" alt><br>注意其中的self参数，self代表类的实例，而非类，类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称, 按照惯例它的名称是 self。<br>self 代表的是类的实例，代表当前对象的地址，而 self.class 则指向类。self 不是 python 关键字<br>举个例子：<br><img src="/luojianfeng0804/2019/07/02/Python任务-第五次打卡/2.jpg" alt></p>
+<h3 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h3><p>Python 同样支持类的继承，派生类的定义如下所示:<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class DerivedClassName(BaseClassName1):</span><br><span class="line">    &lt;statement-1&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    &lt;statement-N&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="类属性与方法"><a href="#类属性与方法" class="headerlink" title="类属性与方法"></a>类属性与方法</h3><p>类的私有属性<br><strong>private_attrs：两个下划线开头，声明该属性为私有，不能在类的外部被使用或直接访问。在类内部的方法中使用时 self.</strong>private_attrs。<br>类的方法<br>在类的内部，使用 def 关键字来定义一个方法，与一般函数定义不同，类方法必须包含参数 self，且为第一个参数，self 代表的是类的实例。<br>self 的名字并不是规定死的，也可以使用 this，但是最好还是按照约定是用 self。<br>类的私有方法<br><strong>private_method：两个下划线开头，声明该方法为私有方法，只能在类的内部调用 ，不能在类的外部调用。self.</strong>private_methods。 </p>
+<h3 id="类的专有方法："><a href="#类的专有方法：" class="headerlink" title="类的专有方法："></a>类的专有方法：</h3><ul>
+<li><strong>init</strong> : 构造函数，在生成对象时调用</li>
+<li><strong>del</strong> : 析构函数，释放对象时使用</li>
+<li><strong>repr</strong> : 打印，转换</li>
+<li><strong>setitem</strong> : 按照索引赋值</li>
+<li><strong>getitem</strong>: 按照索引获取值</li>
+<li><strong>len</strong>: 获得长度</li>
+<li><strong>cmp</strong>: 比较运算</li>
+<li><strong>call</strong>: 函数调用</li>
+<li><strong>add</strong>: 加运算</li>
+<li><strong>sub</strong>: 减运算</li>
+<li><strong>mul</strong>: 乘运算</li>
+<li><strong>truediv</strong>: 除运算</li>
+<li><strong>mod</strong>: 求余运算</li>
+<li><strong>pow</strong>: 乘方<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a><a href="https://www.runoob.com/python3/python3-reg-expressions.html" target="_blank" rel="noopener">正则表达式</a></h2>正则表达式是一个特殊的字符序列，它能帮助你方便的检查一个字符串是否与某种模式匹配。re 模块使 Python 语言拥有全部的正则表达式功能。<br>compile 函数根据一个模式字符串和可选的标志参数生成一个正则表达式对象。该对象拥有一系列方法用于正则表达式匹配和替换。<br>re 模块也提供了与这些方法功能完全一致的函数，这些函数使用一个模式字符串做为它们的第一个参数。<br><a href="https://www.runoob.com/regexp/regexp-tutorial.html" target="_blank" rel="noopener">正则表达式教程</a><br>典型的搜索和替换操作要求您提供与预期的搜索结果匹配的确切文本。虽然这种技术对于对静态文本执行简单搜索和替换任务可能已经足够了，但它缺乏灵活性，若采用这种方法搜索动态文本，即使不是不可能，至少也会变得很困难。<br>通过使用正则表达式，可以：</li>
+<li>测试字符串内的模式。<br>例如，可以测试输入字符串，以查看字符串内是否出现电话号码模式或信用卡号码模式。这称为数据验证。</li>
+<li>替换文本。<br>可以使用正则表达式来识别文档中的特定文本，完全删除该文本或者用其他文本替换它。</li>
+<li>基于模式匹配从字符串中提取子字符串。<br>可以查找文档内或输入域内特定的文本。<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a><a href="https://www.runoob.com/regexp/regexp-syntax.html" target="_blank" rel="noopener">语法</a></h3>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。<br>例如：</li>
+<li>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。 </li>
+<li>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。 </li>
+<li>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）。<br>构造正则表达式的方法和创建数学表达式的方法一样。也就是用多种元字符与运算符可以将小的表达式结合在一起来创建更大的表达式。正则表达式的组件可以是单个的字符、字符集合、字符范围、字符间的选择或者所有这些组件的任意组合。<br>正则表达式是由普通字符（例如字符 a 到 z）以及特殊字符（称为”元字符”）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。<h2 id="re模块"><a href="#re模块" class="headerlink" title="re模块"></a><a href="https://www.runoob.com/python3/python3-reg-expressions.html" target="_blank" rel="noopener">re模块</a></h2><h3 id="re-match函数"><a href="#re-match函数" class="headerlink" title="re.match函数"></a>re.match函数</h3>re.match 尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回none。<br>函数语法：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.match(pattern, string, flags=0)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>函数参数说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">pattern</td>
+<td style="text-align:left">匹配的正则表达式</td>
+</tr>
+<tr>
+<td style="text-align:center">string</td>
+<td style="text-align:left">要匹配的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center">flags</td>
+<td style="text-align:left">标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="re-search方法"><a href="#re-search方法" class="headerlink" title="re.search方法"></a>re.search方法</h3><p>re.search 扫描整个字符串并返回第一个成功的匹配。<br>函数语法：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.search(pattern, string, flags=0)</span><br></pre></td></tr></table></figure></p>
+<p>函数参数说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">pattern</td>
+<td style="text-align:left">匹配的正则表达式</td>
+</tr>
+<tr>
+<td style="text-align:center">string</td>
+<td style="text-align:left">要匹配的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:center">flags</td>
+<td style="text-align:left">标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="re-match与re-search的区别"><a href="#re-match与re-search的区别" class="headerlink" title="re.match与re.search的区别"></a>re.match与re.search的区别</h3><p>re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配。</p>
+<h3 id="检索和替换"><a href="#检索和替换" class="headerlink" title="检索和替换"></a>检索和替换</h3><p>Python 的re模块提供了re.sub用于替换字符串中的匹配项。<br>语法：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.sub(pattern, repl, string, count=0, flags=0)</span><br></pre></td></tr></table></figure></p>
+<p>参数：</p>
+<ul>
+<li>pattern : 正则中的模式字符串。</li>
+<li>repl : 替换的字符串，也可为一个函数。</li>
+<li>string : 要被查找替换的原始字符串。</li>
+<li>count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。</li>
+<li>flags : 编译时用的匹配模式，数字形式。<br>前三个为必选参数，后两个为可选参数。<h2 id="http请求"><a href="#http请求" class="headerlink" title="http请求"></a><a href="https://www.runoob.com/python3/python3-socket.html" target="_blank" rel="noopener">http请求</a></h2>Python 提供了两个级别访问的网络服务。：</li>
+<li>低级别的网络服务支持基本的 Socket，它提供了标准的 BSD Sockets API，可以访问底层操作系统Socket接口的全部方法。</li>
+<li>高级别的网络服务模块 SocketServer， 它提供了服务器中心类，可以简化网络服务器的开发。<br><a href="https://docs.python.org/zh-cn/3.7/library/http.html#module-http" target="_blank" rel="noopener">http模块是Python Internet 重要模块之一</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/luojianfeng0804/2019/07/02/Python任务-第五次打卡/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python任务-第四次打卡" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -790,69 +938,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/luojianfeng0804/2019/05/24/Java基础题7-10题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SQL作业第四弹" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">SQL作业第四弹</a>
-    </h1>
-  
-
-        
-        <a href="/luojianfeng0804/2019/05/21/SQL作业第四弹/" class="archive-article-date">
-  	<time datetime="2019-05-21T13:28:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="项目十"><a href="#项目十" class="headerlink" title="项目十"></a>项目十</h2><p>Trips 表中存所有出租车的行程信息，Users 表存所有用户。<br></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/luojianfeng0804/2019/05/21/SQL作业第四弹/">展开全文 >></a>
         </p>
       
 
