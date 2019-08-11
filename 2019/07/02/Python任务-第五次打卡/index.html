@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://luojianfeng0804.github.io/luojianfeng0804">
   <title>Python任务-第五次打卡  | CodeEdge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="类与对象类的定义Python中的类与对象的思想与C++、Java十分相似，区别主要在语法方面。类的申明：bash 123456class ClassName:    &amp;lt;statement-1&amp;gt;    .    .    .    &amp;lt;statement-N&amp;gt; 类有一个名为 init() 的特殊方法（构造方法），该方法在类实例化时会自动调用，像下面这样：bash 12def">
+  <meta name="description" content="类与对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python任务-第五次打卡 ">
 <meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/07/02/Python任务-第五次打卡/index.html">
 <meta property="og:site_name" content="CodeEdge">
-<meta property="og:description" content="类与对象类的定义Python中的类与对象的思想与C++、Java十分相似，区别主要在语法方面。类的申明：bash 123456class ClassName:    &amp;lt;statement-1&amp;gt;    .    .    .    &amp;lt;statement-N&amp;gt; 类有一个名为 init() 的特殊方法（构造方法），该方法在类实例化时会自动调用，像下面这样：bash 12def">
+<meta property="og:description" content="类与对象">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/07/02/Python任务-第五次打卡/1.jpg">
 <meta property="og:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/07/02/Python任务-第五次打卡/2.jpg">
-<meta property="og:updated_time" content="2019-08-05T13:30:20.610Z">
+<meta property="og:updated_time" content="2019-08-11T14:19:07.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python任务-第五次打卡 ">
-<meta name="twitter:description" content="类与对象类的定义Python中的类与对象的思想与C++、Java十分相似，区别主要在语法方面。类的申明：bash 123456class ClassName:    &amp;lt;statement-1&amp;gt;    .    .    .    &amp;lt;statement-N&amp;gt; 类有一个名为 init() 的特殊方法（构造方法），该方法在类实例化时会自动调用，像下面这样：bash 12def">
+<meta name="twitter:description" content="类与对象">
 <meta name="twitter:image" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/07/02/Python任务-第五次打卡/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="CodeEdge" type="application/atom+xml">
@@ -169,8 +169,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a><a href="https://www.runoob.com/python3/python3-class.html" target="_blank" rel="noopener">类与对象</a></h2><h3 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h3><p>Python中的类与对象的思想与C++、Java十分相似，区别主要在语法方面。<br>类的申明：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class ClassName:</span><br><span class="line">    &lt;statement-1&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    &lt;statement-N&gt;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a><a href="https://www.runoob.com/python3/python3-class.html" target="_blank" rel="noopener">类与对象</a></h2><a id="more"></a>
+<h3 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h3><p>Python中的类与对象的思想与C++、Java十分相似，区别主要在语法方面。<br>类的申明：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class ClassName:</span><br><span class="line">    &lt;statement-1&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    &lt;statement-N&gt;</span><br></pre></td></tr></table></figure></p>
 <p>类有一个名为 <strong>init</strong>() 的特殊方法（构造方法），该方法在类实例化时会自动调用，像下面这样：<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self):</span><br><span class="line">    self.data = []</span><br></pre></td></tr></table></figure></p>
 <p>当然， <strong>init</strong>() 方法可以有参数，参数通过 <strong>init</strong>() 传递到类的实例化操作上。例如:<br><img src="/luojianfeng0804/2019/07/02/Python任务-第五次打卡/1.jpg" alt><br>注意其中的self参数，self代表类的实例，而非类，类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称, 按照惯例它的名称是 self。<br>self 代表的是类的实例，代表当前对象的地址，而 self.class 则指向类。self 不是 python 关键字<br>举个例子：<br><img src="/luojianfeng0804/2019/07/02/Python任务-第五次打卡/2.jpg" alt></p>
 <h3 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h3><p>Python 同样支持类的继承，派生类的定义如下所示:<br>bash <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class DerivedClassName(BaseClassName1):</span><br><span class="line">    &lt;statement-1&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    &lt;statement-N&gt;</span><br></pre></td></tr></table></figure></p>

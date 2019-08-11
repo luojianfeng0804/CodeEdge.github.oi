@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://luojianfeng0804.github.io/luojianfeng0804">
-  <title>Archives: 2019/8 | CodeEdge</title>
+  <title>爬虫实战 综合大作业 | CodeEdge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeEdge">
-<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/archives/2019/08/index.html">
+  <meta name="description" content="本次作业是对上几次作业的综合，同时我也进行了一些改进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫实战 综合大作业">
+<meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/08/11/爬虫实战-综合大作业/index.html">
 <meta property="og:site_name" content="CodeEdge">
+<meta property="og:description" content="本次作业是对上几次作业的综合，同时我也进行了一些改进">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-11T14:37:32.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeEdge">
+<meta name="twitter:title" content="爬虫实战 综合大作业">
+<meta name="twitter:description" content="本次作业是对上几次作业的综合，同时我也进行了一些改进">
   
     <link rel="alternative" href="/atom.xml" title="CodeEdge" type="application/atom+xml">
   
@@ -142,103 +146,174 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-爬虫实战-综合大作业" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      爬虫实战 综合大作业
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/luojianfeng0804/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/08/11/爬虫实战-综合大作业/" class="archive-article-date">
+
+        
+        <a href="/luojianfeng0804/2019/08/11/爬虫实战-综合大作业/" class="archive-article-date">
   	<time datetime="2019-08-11T12:38:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/08/11/爬虫实战-综合大作业/">爬虫实战 综合大作业</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本次作业是对上几次作业的综合，同时我也进行了一些改进<br><a id="more"></a></p>
+<h2 id="一、首先利用selenium登录网站："><a href="#一、首先利用selenium登录网站：" class="headerlink" title="一、首先利用selenium登录网站："></a>一、首先利用selenium登录网站：</h2><p>代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">login_em = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.XPATH,<span class="string">'/html/body/div/div[3]/div[4]/div/div/a[2]'</span>))</span><br><span class="line">    )</span><br><span class="line">    login_em.click()</span><br><span class="line">    login_em = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.XPATH,<span class="string">'/html/body/div[2]/div[2]/div[1]/a[2]'</span>))</span><br><span class="line">    )</span><br><span class="line">    login_em.click()</span><br><span class="line">    input_ID = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.NAME,<span class="string">'username'</span>))</span><br><span class="line">    )</span><br><span class="line">    input_ID.send_keys(<span class="string">'***************'</span>)</span><br><span class="line">    password = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.NAME,<span class="string">'password'</span>))</span><br><span class="line">    )</span><br><span class="line">    password.send_keys(<span class="string">'******************'</span>)</span><br><span class="line">    login_em = browser.find_element_by_class_name(<span class="string">'button'</span>)</span><br><span class="line">    login_em.click()</span><br></pre></td></tr></table></figure></p>
+<p>开始是使用了time.sleep的方法等待页面刷新，后来发现WebDriverWait更好用，且速度更快</p>
+<h2 id="二、数据处理"><a href="#二、数据处理" class="headerlink" title="二、数据处理"></a>二、数据处理</h2><p>代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">html = browser.page_source</span><br><span class="line">    html_Soup = BeautifulSoup(html,<span class="string">'lxml'</span>)</span><br><span class="line">    <span class="keyword">for</span> data <span class="keyword">in</span> html_Soup.find_all(<span class="string">"tbody"</span>):</span><br><span class="line">        try:</span><br><span class="line">            userid = data.find(<span class="string">"div"</span>, class_=<span class="string">"auth"</span>)</span><br><span class="line">            <span class="built_in">print</span>(userid.text+<span class="string">":"</span>)</span><br><span class="line">            content = data.find(<span class="string">"td"</span>, class_=<span class="string">"postbody"</span>)</span><br><span class="line">            <span class="built_in">print</span>(re.sub(r<span class="string">'\s+'</span>,<span class="string">''</span>,content.text))</span><br><span class="line">        except:</span><br><span class="line">            pass</span><br></pre></td></tr></table></figure></p>
+<h2 id="三、整体代码如下："><a href="#三、整体代码如下：" class="headerlink" title="三、整体代码如下："></a>三、整体代码如下：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import re</span><br><span class="line">import time</span><br><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.support.ui import WebDriverWait</span><br><span class="line">from selenium.webdriver.support import expected_conditions as EC</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line">def land(url):</span><br><span class="line">    browser.get(url)</span><br><span class="line">    login_em = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.XPATH,<span class="string">'/html/body/div/div[3]/div[4]/div/div/a[2]'</span>))</span><br><span class="line">    )</span><br><span class="line">    login_em.click()</span><br><span class="line">    login_em = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.XPATH,<span class="string">'/html/body/div[2]/div[2]/div[1]/a[2]'</span>))</span><br><span class="line">    )</span><br><span class="line">    login_em.click()</span><br><span class="line">    input_ID = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.NAME,<span class="string">'username'</span>))</span><br><span class="line">    )</span><br><span class="line">    input_ID.send_keys(<span class="string">'13429886885'</span>)</span><br><span class="line">    password = WebDriverWait(browser,10).until(</span><br><span class="line">        EC.presence_of_element_located((By.NAME,<span class="string">'password'</span>))</span><br><span class="line">    )</span><br><span class="line">    password.send_keys(<span class="string">'13966277267asd_'</span>)</span><br><span class="line">    login_em = browser.find_element_by_class_name(<span class="string">'button'</span>)</span><br><span class="line">    login_em.click()</span><br><span class="line">    </span><br><span class="line">def get_data():</span><br><span class="line">    time.sleep(10)</span><br><span class="line">    html = browser.page_source</span><br><span class="line">    html_Soup = BeautifulSoup(html,<span class="string">'lxml'</span>)</span><br><span class="line">    <span class="keyword">for</span> data <span class="keyword">in</span> html_Soup.find_all(<span class="string">"tbody"</span>):</span><br><span class="line">        try:</span><br><span class="line">            userid = data.find(<span class="string">"div"</span>, class_=<span class="string">"auth"</span>)</span><br><span class="line">            <span class="built_in">print</span>(userid.text+<span class="string">":"</span>)</span><br><span class="line">            content = data.find(<span class="string">"td"</span>, class_=<span class="string">"postbody"</span>)</span><br><span class="line">            <span class="built_in">print</span>(re.sub(r<span class="string">'\s+'</span>,<span class="string">''</span>,content.text))</span><br><span class="line">        except:</span><br><span class="line">            pass</span><br><span class="line">    </span><br><span class="line">def main():</span><br><span class="line">    url = <span class="string">'http://www.dxy.cn/bbs/thread/626626#626626'</span></span><br><span class="line">    land(url)  </span><br><span class="line">    get_data()</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>最后还有一个网页人工验证的问题仍未解决</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://luojianfeng0804.github.io/luojianfeng0804/2019/08/11/爬虫实战-综合大作业/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/08/08/爬虫实战-Beatisulsoup和Xpath方法分别获取评论信息/" class="archive-article-date">
-  	<time datetime="2019-08-08T11:29:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/luojianfeng0804/2019/08/08/爬虫实战-Beatisulsoup和Xpath方法分别获取评论信息/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">爬虫实战 Beatisulsoup和Xpath方法分别获取评论信息</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/08/08/爬虫实战-Beatisulsoup和Xpath方法分别获取评论信息/">爬虫实战 Beatisulsoup和Xpath方法分别获取评论信息</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、首先利用selenium登录网站："><span class="toc-number">1.</span> <span class="toc-text">一、首先利用selenium登录网站：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、数据处理"><span class="toc-number">2.</span> <span class="toc-text">二、数据处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、整体代码如下："><span class="toc-number">3.</span> <span class="toc-text">三、整体代码如下：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/luojianfeng0804/2019/08/06/爬虫实战-用正则表达式爬取豆瓣电影/" class="archive-article-date">
-  	<time datetime="2019-08-06T11:19:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-06</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/luojianfeng0804/2019/08/06/爬虫实战-用正则表达式爬取豆瓣电影/">爬虫实战 用正则表达式爬取豆瓣电影</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -261,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

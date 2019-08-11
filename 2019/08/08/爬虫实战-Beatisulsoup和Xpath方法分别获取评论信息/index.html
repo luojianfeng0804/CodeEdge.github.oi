@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://luojianfeng0804.github.io/luojianfeng0804">
   <title>爬虫实战 Beatisulsoup和Xpath方法分别获取评论信息 | CodeEdge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、BeautifulSoup1.简要介绍BeautifulSoup是一个可以从HTML或XML文件中提取数据的Python库，它能够通过你喜欢的转换器实现惯用的文档导航，查找，修改文档的方式。 2.Beautiful Soup的使用2.1.bs4库的导入from bs4 import BeautifulSoup 2.2.创建BeautifulSoup对象以下’lxml’是手动指定的解析器。如果">
+  <meta name="description" content="一、BeautifulSoup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="爬虫实战 Beatisulsoup和Xpath方法分别获取评论信息">
 <meta property="og:url" content="https://luojianfeng0804.github.io/luojianfeng0804/2019/08/08/爬虫实战-Beatisulsoup和Xpath方法分别获取评论信息/index.html">
 <meta property="og:site_name" content="CodeEdge">
-<meta property="og:description" content="一、BeautifulSoup1.简要介绍BeautifulSoup是一个可以从HTML或XML文件中提取数据的Python库，它能够通过你喜欢的转换器实现惯用的文档导航，查找，修改文档的方式。 2.Beautiful Soup的使用2.1.bs4库的导入from bs4 import BeautifulSoup 2.2.创建BeautifulSoup对象以下’lxml’是手动指定的解析器。如果">
+<meta property="og:description" content="一、BeautifulSoup">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-08T12:22:16.645Z">
+<meta property="og:updated_time" content="2019-08-11T14:22:07.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬虫实战 Beatisulsoup和Xpath方法分别获取评论信息">
-<meta name="twitter:description" content="一、BeautifulSoup1.简要介绍BeautifulSoup是一个可以从HTML或XML文件中提取数据的Python库，它能够通过你喜欢的转换器实现惯用的文档导航，查找，修改文档的方式。 2.Beautiful Soup的使用2.1.bs4库的导入from bs4 import BeautifulSoup 2.2.创建BeautifulSoup对象以下’lxml’是手动指定的解析器。如果">
+<meta name="twitter:description" content="一、BeautifulSoup">
   
     <link rel="alternative" href="/atom.xml" title="CodeEdge" type="application/atom+xml">
   
@@ -166,8 +166,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="一、BeautifulSoup"><a href="#一、BeautifulSoup" class="headerlink" title="一、BeautifulSoup"></a>一、<a href="https://blog.csdn.net/qq_37597345/article/details/83781420" target="_blank" rel="noopener">BeautifulSoup</a></h2><h3 id="1-简要介绍"><a href="#1-简要介绍" class="headerlink" title="1.简要介绍"></a>1.简要介绍</h3><p>BeautifulSoup是一个可以从HTML或XML文件中提取数据的Python库，它能够通过你喜欢的转换器实现惯用的文档导航，查找，修改文档的方式。</p>
+        <h2 id="一、BeautifulSoup"><a href="#一、BeautifulSoup" class="headerlink" title="一、BeautifulSoup"></a>一、<a href="https://blog.csdn.net/qq_37597345/article/details/83781420" target="_blank" rel="noopener">BeautifulSoup</a></h2><a id="more"></a>
+<h3 id="1-简要介绍"><a href="#1-简要介绍" class="headerlink" title="1.简要介绍"></a>1.简要介绍</h3><p>BeautifulSoup是一个可以从HTML或XML文件中提取数据的Python库，它能够通过你喜欢的转换器实现惯用的文档导航，查找，修改文档的方式。</p>
 <h3 id="2-Beautiful-Soup的使用"><a href="#2-Beautiful-Soup的使用" class="headerlink" title="2.Beautiful Soup的使用"></a>2.Beautiful Soup的使用</h3><h4 id="2-1-bs4库的导入"><a href="#2-1-bs4库的导入" class="headerlink" title="2.1.bs4库的导入"></a>2.1.bs4库的导入</h4><p>from bs4 import BeautifulSoup</p>
 <h4 id="2-2-创建BeautifulSoup对象"><a href="#2-2-创建BeautifulSoup对象" class="headerlink" title="2.2.创建BeautifulSoup对象"></a>2.2.创建BeautifulSoup对象</h4><p>以下’lxml’是手动指定的解析器。如果省略，BeautifulSoup一般会选择最合适的解析器来解析这段文档，如果手动指定，那么BeautifulSoup会选择指定的解析器来解析文档。<br>方式1. 直接通过字符串创建<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html_str, <span class="string">'lxml'</span>, from_encoding = <span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">    Example:</span><br><span class="line">    from bs4 import BeautifulSoup</span><br><span class="line">    import requests</span><br><span class="line">    import chardet</span><br><span class="line"></span><br><span class="line">    url = <span class="string">'http://www.baidu.com'</span></span><br><span class="line">    response = requests.get(url)</span><br><span class="line">    response.encoding = chardet.detect(response.content)[<span class="string">'encoding'</span>]</span><br><span class="line">    text = response.text</span><br><span class="line"></span><br><span class="line">    soup = BeautifulSoup(text, <span class="string">'lxml'</span>)</span><br><span class="line">    <span class="built_in">print</span>(soup.prettify())</span><br></pre></td></tr></table></figure></p>
 <p>方式2. 通过html文件来创建<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    from bs4 import BeautifulSoup</span><br><span class="line">    import requests</span><br><span class="line">    import chardet</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    url = <span class="string">'http://www.baidu.com'</span></span><br><span class="line">    response = requests.get(url)</span><br><span class="line">    response.encoding = chardet.detect(response.content)[<span class="string">'encoding'</span>]</span><br><span class="line">    text = response.text</span><br><span class="line"></span><br><span class="line">    with open(<span class="string">'hell'</span>, <span class="string">'w'</span>) as fout:</span><br><span class="line">        fout.write(text)</span><br><span class="line"></span><br><span class="line">    soup = BeautifulSoup(open(<span class="string">'hell'</span>), <span class="string">'lxml'</span>)</span><br><span class="line">    <span class="built_in">print</span>(soup.prettify())</span><br></pre></td></tr></table></figure></p>
@@ -271,6 +271,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/luojianfeng0804/2019/08/11/爬虫实战-综合大作业/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          爬虫实战 综合大作业
+        
+      </div>
+    </a>
   
   
     <a href="/luojianfeng0804/2019/08/06/爬虫实战-用正则表达式爬取豆瓣电影/" id="article-nav-older" class="article-nav-link-wrap">
